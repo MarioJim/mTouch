@@ -1,0 +1,39 @@
+body {
+    background: rgb(239, 242, 243);
+    margin: 0;
+}
+
+header {
+    display: inline-flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.botBorder {
+    border-bottom: 1px solid #DCDEDD;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 280%;
+    color: #43474F;
+}
+
+#logoO {
+    margin-top: 3px;
+    height: 40%;
+}
+
+nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav > a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #43474F;
+}
