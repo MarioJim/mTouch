@@ -1,7 +1,28 @@
+#knocki {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px; 
+}
+
+#knocki > img {
+    height: 420px;
+}
+
+#knocki > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    width: 30%;
+    min-width: 500px;
+    padding: 0 0 80px 60px;
+    line-height: 160%;
+}
+
 #members {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 #members > div {
