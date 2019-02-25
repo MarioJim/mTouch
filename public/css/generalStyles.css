@@ -12,7 +12,7 @@ header {
     width: 100%;
 }
 
-.botBorder, section{
+header, nav, section{
     border-bottom: 1px solid #DCDEDD;
 }
 

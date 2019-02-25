@@ -1,11 +1,13 @@
 #personas {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-bottom: 20px;
 }
 
 #personas > div {
     width: 400px;
+    margin : 10px;
     background-color: #E6E6E6;
     display: flex;
     flex-direction: column;
