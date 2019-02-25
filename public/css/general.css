@@ -28,16 +28,17 @@ h1 {
 }
 
 nav {
-    padding: 20px 160px;
+    padding: 20px 10%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 nav > a {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #43474F;
-    padding: 6px 8px;
+    padding: 6px 10px;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;

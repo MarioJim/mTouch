@@ -3,20 +3,28 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-bottom: 20px; 
+    padding: 40px 30px 20px 30px;
 }
 
 #knocki > img {
-    height: 420px;
+    height: 400px;
 }
 
-#knocki > p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+#knocki > div {
     width: 30%;
     min-width: 500px;
-    padding: 0 0 80px 60px;
+    padding: 0 0 60px 60px;
+}
+
+#knocki > div > h2 {
+    text-align: left;
+}
+
+#knocki > div > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
     line-height: 160%;
+    margin: 0;
 }
 
 #members {
