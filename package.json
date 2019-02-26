@@ -18,5 +18,8 @@
   "homepage": "https://github.com/MarioJim/mTouch#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "engines": {
+    "node": "11.x"
   }
 }
