@@ -1,14 +1,21 @@
+h2 {
+    margin-bottom: 0;
+}
+
 #personas {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
+    overflow-x: scroll;
+    justify-content: center;
+    padding: 20px 20px 10px 120px;
 }
 
 #personas > div {
     width: 400px;
-    margin : 10px;
+    box-shadow: -6px 0 12px #64646490;
+    margin: 10px 0 10px -110px;
+    transition: .2s;
     background-color: #E6E6E6;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +25,14 @@
 @keyframes rise{
     0%{ opacity: 0; transform: translateY(50px); }
     100%{ transform: translateY(0px) }
+}
+
+#personas > div:hover {
+    transform: translate(0 , -15px);
+}
+
+#personas > div:hover~div {
+    transform: translateX(120px);
 }
 
 #personas > div > h1 {

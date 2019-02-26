@@ -1,5 +1,5 @@
 body {
-    background: rgb(239, 242, 243);
+    background: #EFF2F2;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -47,7 +47,7 @@ nav > a {
 }
 
 nav > a:hover {
-    background: #43474F;
+    background: #43474FD0;
     color: #DCDEDD;
 }
 
