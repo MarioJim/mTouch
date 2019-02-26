@@ -1,0 +1,22 @@
+{
+  "name": "mtouch",
+  "version": "1.0.0",
+  "description": "Design Fundamentals final project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioJim/mTouch.git"
+  },
+  "author": "MarioJim, RichieSjt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioJim/mTouch/issues"
+  },
+  "homepage": "https://github.com/MarioJim/mTouch#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
