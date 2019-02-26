@@ -5,12 +5,12 @@ h2 {
 #personas {
     display: flex;
     overflow-x: scroll;
-    justify-content: center;
-    padding: 20px 20px 10px 120px;
+    /* justify-content: center; */
+    padding: 20px 20px 10px 130px;
 }
 
 #personas > div {
-    width: 400px;
+    min-width: 400px;
     box-shadow: -6px 0 12px #64646490;
     margin: 10px 0 10px -110px;
     transition: .2s;
@@ -40,7 +40,12 @@ h2 {
 }
 
 #personas > div > p {
-    text-align: center;
-    width: 300px;
     font-size: 18px;
+    text-align: center;
+    padding: 0 40px;
+}
+
+#personas > div > p:first-of-type {
+    max-width: 380px;
+    height: 74px;
 }
