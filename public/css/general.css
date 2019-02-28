@@ -10,6 +10,10 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #EFF2F2;
 }
 
 header, nav, section{
@@ -32,6 +36,10 @@ nav {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+    background: #EFF2F2;
 }
 
 nav > a {
