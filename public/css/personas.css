@@ -18,10 +18,16 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
+
+}
+
+@media (min-width: 700px) {
+    #personas > div { flex-basis: 0; }
 }
 
 #personas > div:hover {
-    transform: translate(0 , -15px);
+    transform: translate(0, -15px);
 }
 
 #personas > div:hover~div {
@@ -47,4 +53,26 @@ h2 {
 #personas > div > p:first-of-type {
     max-width: 380px;
     height: 74px;
+}
+
+@media (max-width: 700px) {
+    #personas {
+        overflow-x: auto;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    #personas > div {
+        width: 100%;
+        box-shadow: 0 0 0;
+        margin: 0 0 20px 0;
+    }
+
+    #personas > div:hover {
+        transform: translate(0, 0);
+    }
+    
+    #personas > div:hover~div {
+        transform: translateX(0);
+    }
 }
