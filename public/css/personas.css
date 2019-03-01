@@ -51,7 +51,7 @@ h2 {
 
 #personas > div > p:first-of-type {
     max-width: 380px;
-    height: 74px;
+    height: 98px;
 }
 
 @media (max-width: 800px) {
