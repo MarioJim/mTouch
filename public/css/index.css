@@ -8,12 +8,19 @@
 
 #knocki > img {
     height: 400px;
+    animation: rise 2s ease forwards;
 }
 
 #knocki > div {
     width: 40%;
     /* min-width: 460px; */
     padding: 0 0 60px 60px;
+    animation: rise 2s ease forwards;
+}
+
+@keyframes rise{
+    0%{opacity: 0; transform: translateY(30px);}
+    100%{transform: translateY(0px);}
 }
 
 #knocki > div > h2 {
