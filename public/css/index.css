@@ -19,8 +19,8 @@
 }
 
 @keyframes rise{
-    0%{opacity: 0; transform: translateY(30px);}
-    100%{transform: translateY(0px);}
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { transform: translateY(0px); }
 }
 
 #knocki > div > h2 {
@@ -29,7 +29,8 @@
 }
 
 #knocki > div > p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 24px;
     line-height: 160%;
     margin: 0;
@@ -74,6 +75,6 @@
 }
 
 #members > div > img {
-    width: 120px;
+    width: 160px;
     border-radius: 50%;
 }

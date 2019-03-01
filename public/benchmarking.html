@@ -6,25 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benchmarking</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins:400,600|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/benchmarking.css" rel="stylesheet">
+    <script>
+        const toggleNav = () => {
+            document.getElementById("sidebarButton").classList.toggle("active");
+            document.getElementById("side-menu").classList.toggle("active");
+        }
+        const closeNav = () => {
+            document.getElementById("sidebarButton").classList.remove("active");
+            document.getElementById("side-menu").classList.remove("active");
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <h1>mT</h1>
-        <img src="img/logoO.png" id="logoO">
-        <h1>uch</h1>
+        <a href="./index.html">
+            <div id="logo">
+                <h1>mT</h1>
+                <img src="img/logoO.png" id="logoO">
+                <h1>uch</h1>
+            </div>
+        </a>
+        <div id="menu">
+            <a href="./personas.html">Personas</a>
+            <a href="./benchmarking.html">Benchmarking</a>
+            <a href="./assets.html">Low level prototype assets</a>
+            <a href="https://marvelapp.com/b35gi9b/" target="_blank">Marvel prototype</a>
+        </div>
+        <div id="sidebarButton" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="side-menu">
+            <div id="close-button" onclick="closeNav()">
+                <span class="top"></span>
+                <span class="bottom"></span>
+            </div>
+            <div id="links">
+                <a href="./personas.html">Personas</a>
+                <a href="./benchmarking.html">Benchmarking</a>
+                <a href="./assets.html">Low level prototype assets</a>
+                <a href="https://marvelapp.com/b35gi9b/" target="_blank">Marvel prototype</a>
+            </div>
+        </div>
     </header>
-
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./personas.html">Personas</a>
-        <a href="./benchmarking.html">Benchmarking</a>
-        <a href="./assets.html">Low level prototype assets</a>
-        <a href="https://marvelapp.com/b35gi9b/" target="_blank">Marvel prototype</a>
-    </nav>
 </body>
 
 </html>
