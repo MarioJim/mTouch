@@ -1,6 +1,6 @@
 #knocki {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
     padding: 40px 30px 20px 30px;
@@ -12,7 +12,7 @@
 
 #knocki > div {
     width: 40%;
-    min-width: 460px;
+    /* min-width: 460px; */
     padding: 0 0 60px 60px;
 }
 
@@ -29,14 +29,31 @@
     width: 100%;
 }
 
+@media (max-width: 800px) {
+    #knocki { flex-wrap: wrap; }
+
+    #knocki > img {
+        max-width: 400px;
+        width: 80%;
+        height: auto;
+    }
+
+    #knocki > div {
+        min-width: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 #members {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 0 20px;
 }
 
 #members > div {
-    padding: 10px;
+    margin: 10px;
     width: 300px;
     display: flex;
     flex-direction: column;

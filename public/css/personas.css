@@ -19,10 +19,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     #personas > div { flex-basis: 0; }
 }
 
@@ -55,7 +54,7 @@ h2 {
     height: 74px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     #personas {
         overflow-x: auto;
         padding: 20px;
@@ -63,16 +62,14 @@ h2 {
     }
 
     #personas > div {
+        min-width: 0;
         width: 100%;
         box-shadow: 0 0 0;
         margin: 0 0 20px 0;
     }
 
-    #personas > div:hover {
-        transform: translate(0, 0);
-    }
-    
-    #personas > div:hover~div {
-        transform: translateX(0);
-    }
+    #personas > div:hover { transform: translate(0, 0); }
+    #personas > div:hover~div { transform: translateX(0); }
+    #personas > div > img { width: 80%; height: auto; }
+    #personas > div > p:first-of-type { height: auto; }
 }
