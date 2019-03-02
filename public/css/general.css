@@ -84,7 +84,7 @@ header a:first-of-type {
     display: block;
     height: 3px;
     margin-top: 5px;
-    padding: 0;
+    margin-right: 5px;
     -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
     width: 30px;
@@ -111,7 +111,7 @@ header a:first-of-type {
     background-color: #ffffff;
     position: fixed;
     top: 0;
-    left: -310px;
+    right: -310px;
     z-index: 1000;
     width: 300px;
     height: 100%;
@@ -123,7 +123,7 @@ header a:first-of-type {
 }
 
 #side-menu.active {
-    left: 0;
+    right: 0;
 }
 
 #close-button {

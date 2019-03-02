@@ -52,6 +52,43 @@
     }
 }
 
+#uses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 4px 20px;
+}
+
+#uses > div {
+    background-color: #e7f2fd;
+    width: 130px;
+    height: 110px;
+    color: #303030;
+    border-radius: 100px 200px 200px 360px;
+    margin: 0 30px 80px 30px;
+    transition-duration: 500ms;
+}
+
+#uses > div:hover {
+    background-color: #1583e9;
+    box-shadow: 0 6px 50px 8px #1583E930;
+}
+
+#uses > div > img {
+    height: 100%;
+    margin-left: 14%;
+    filter: invert(75%);
+    transition-duration: 500ms;
+}
+
+#uses > div:hover > img {
+    filter: invert(0%);
+}
+
+#uses > div > p {
+    margin-top: 5px;
+}
+
 #members {
     display: flex;
     flex-wrap: wrap;
