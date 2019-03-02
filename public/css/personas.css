@@ -12,6 +12,7 @@ h2 {
     min-width: 400px;
     box-shadow: -6px 0 12px #64646490;
     margin: 10px 0 10px -110px;
+    padding-bottom: 10px;
     transition: .2s;
     background-color: #F4F4F4;
     border-radius: 12px;
@@ -44,9 +45,13 @@ h2 {
     width: 400px;
 }
 
+#personas > div > p {
+    padding: 0 40px;
+}
+
 #personas > div > p:first-of-type {
     max-width: 380px;
-    height: 98px;
+    height: 90px;
 }
 
 @media (max-width: 800px) {

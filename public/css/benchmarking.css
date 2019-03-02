@@ -16,7 +16,7 @@
     justify-content: space-evenly;
     margin: 0 auto;
     padding: 0 5%;
-    max-width: 1200px;
+    max-width: 1600px;
 }
 
 #competitors > div {
@@ -26,8 +26,19 @@
 }
 
 #competitors > div > img {
-    width: 400px;
     margin: 0 30px;
+}
+
+#competitors > div > img:first-of-type {
+    width: 22%;
+}
+
+#competitors > div > div {
+    min-width: 400px;
+}
+
+#competitors > div > img:last-of-type {
+    height: 400px;
 }
 
 #competitors h3 {

@@ -1,6 +1,5 @@
 #knocki {
     display: flex;
-    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
     padding: 40px 30px 20px 30px;
@@ -13,12 +12,11 @@
 
 #knocki > div {
     width: 40%;
-    /* min-width: 460px; */
     padding: 0 0 60px 60px;
     animation: rise 2s ease forwards;
 }
 
-@keyframes rise{
+@keyframes rise {
     0% { opacity: 0; transform: translateY(30px); }
     100% { transform: translateY(0px); }
 }
@@ -35,6 +33,7 @@
     line-height: 160%;
     margin: 0;
     width: 100%;
+    text-align: left;
 }
 
 @media (max-width: 800px) {
