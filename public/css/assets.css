@@ -1,4 +1,4 @@
-#prototype{
+#prototype {
     min-width: 400px;
     display: flex;
     flex-direction: row;
@@ -6,28 +6,23 @@
     flex-grow: 1;
     flex-wrap: wrap;
 }
-#prototype > div{
+
+#prototype > div {
     max-width: 436px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#prototype > div > img{
+#prototype > div > img {
     width: 100%;
     max-width: 320px;
     height: auto;
-    margin: 50px;
+    margin: 20px 50px;
 }
 
-#prototype > div > p{
+#prototype > div > p {
     margin-top: 0;
     max-width: 350px;
     font-size: 19px;
-}
-
-body > h1{
-    text-align: center;
-    margin: 35px 0 15px 15px;
-    font-weight: bold;
 }
