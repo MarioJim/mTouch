@@ -25,3 +25,9 @@
     max-width: 350px;
     font-size: 19px;
 }
+
+body > h1{
+    text-align: center;
+    margin: 35px 0 15px 15px;
+    font-weight: bold;
+}

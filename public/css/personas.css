@@ -1,5 +1,7 @@
-h2 {
-    margin-bottom: 0;
+h1 {
+    text-align: center;
+    margin: 35px 0 15px 15px;
+    font-weight: bold;
 }
 
 #personas {
