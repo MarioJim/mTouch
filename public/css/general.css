@@ -169,8 +169,17 @@ header a:first-of-type {
     padding: 14px 12px;
 }
 
+/* Styles for other pages */
+
 h2 {
+    font-family: 'Raleway', sans-serif;
     margin: 25px 0 15px 0;
     text-align: center;
     font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 40px;
 }

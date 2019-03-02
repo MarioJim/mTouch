@@ -1,7 +1,5 @@
-h1 {
-    text-align: center;
-    margin: 35px 0 15px 15px;
-    font-weight: bold;
+h2 {
+    margin-bottom: 0;
 }
 
 #personas {
@@ -15,7 +13,7 @@ h1 {
     box-shadow: -6px 0 12px #64646490;
     margin: 10px 0 10px -110px;
     transition: .2s;
-    background-color: #E6E6E6;
+    background-color: #F4F4F4;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -35,20 +33,15 @@ h1 {
     transform: translateX(120px);
 }
 
-#personas > div > h1 {
-    font-size: 34px;
+#personas > div > h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
     margin-bottom: 0;
 }
 
 #personas > div > img {
     height: 270px;
     width: 400px;
-}
-
-#personas > div > p {
-    font-size: 18px;
-    text-align: center;
-    padding: 0 40px;
 }
 
 #personas > div > p:first-of-type {

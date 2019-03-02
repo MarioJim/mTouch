@@ -1,3 +1,40 @@
-#id > select.h1{
-    font-family: 'Roboto', sans-serif ;
+#why {
+    padding-bottom: 20px;
+}
+
+#why > p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    line-height: 160%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#competitors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 1200px;
+}
+
+#competitors > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#competitors > div > img {
+    width: 400px;
+    margin: 0 30px;
+}
+
+#competitors h3 {
+    font-size: 20px;
+}
+
+#competitors p {
+    text-align: left;
+    padding: 0;
 }
