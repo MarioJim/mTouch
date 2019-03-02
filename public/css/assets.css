@@ -1,0 +1,27 @@
+#prototype{
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+#prototype > div{
+    max-width: 436px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#prototype > div > img{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 50px;
+}
+
+#prototype > div > p{
+    margin-top: 0;
+    max-width: 350px;
+    font-size: 19px;
+}
