@@ -1,5 +1,5 @@
 #why {
-    padding-bottom: 20px;
+    padding: 0 30px 20px 30px;
 }
 
 #why > p {
@@ -21,24 +21,26 @@
 
 #competitors > div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#competitors > div > img {
-    margin: 0 30px;
+#competitors > div:nth-child(even) {
+    margin-bottom: 24px;
 }
 
-#competitors > div > img:first-of-type {
+#competitors > div:nth-child(even) > img {
+    width: 230px;
+}
+
+#competitors > div:nth-child(odd) > img {
+    margin: 0 30px;
     width: 22%;
 }
 
 #competitors > div > div {
-    min-width: 400px;
-}
-
-#competitors > div > img:last-of-type {
-    height: 400px;
+    width: 60%;
 }
 
 #competitors h3 {
@@ -46,6 +48,13 @@
 }
 
 #competitors p {
-    text-align: left;
+    text-align: justify;
     padding: 0;
+}
+
+@media (max-width: 1000px) {
+    #competitors > div {  margin-bottom: 50px; }
+    #competitors > div:nth-child(odd) > img:first-of-type { width: 60%; }
+    #competitors > div:nth-child(odd) > div { width: auto; }
+    #competitors > div:nth-child(even) > img:nth-child(3) { display: none; }
 }
