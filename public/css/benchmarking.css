@@ -13,7 +13,6 @@
 #competitors {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     margin: 0 auto;
     padding: 0 5%;
     max-width: 1600px;
@@ -31,7 +30,7 @@
 }
 
 #competitors > div:nth-child(even) > img {
-    width: 230px;
+    width: 220px;
 }
 
 #competitors > div:nth-child(odd) > img {
@@ -52,9 +51,14 @@
     padding: 0;
 }
 
+@media (max-width: 750px) {
+    #competitors > div:nth-child(even) > img { width: 45%; max-width: 220px; }
+    #competitors > div:nth-child(even) > img:nth-child(3) { display: none; }
+}
+
 @media (max-width: 1000px) {
-    #competitors > div {  margin-bottom: 50px; }
     #competitors > div:nth-child(odd) > img:first-of-type { width: 60%; }
     #competitors > div:nth-child(odd) > div { width: auto; }
-    #competitors > div:nth-child(even) > img:nth-child(3) { display: none; }
+    #competitors > div:nth-child(even) {  margin-bottom: 50px; }
+    #competitors > div:nth-child(even) > img:nth-child(4) { display: none; }
 }
