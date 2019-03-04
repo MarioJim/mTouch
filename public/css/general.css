@@ -46,7 +46,7 @@ h1 {
     background: #fff;
 }
 
-header a, #links > a {
+header a, #side-menu > a {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #43474F;
@@ -63,7 +63,7 @@ header a:first-of-type {
     margin-left: 0;
 }
 
-#menu > a:hover, #links> a:hover {
+#menu > a:hover, #side-menu > a:hover {
     background: #43474FD0;
     color: #DCDEDD;
 }
@@ -84,7 +84,7 @@ header a:first-of-type {
     display: block;
     height: 3px;
     margin-top: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
     -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
     width: 30px;
@@ -103,70 +103,45 @@ header a:first-of-type {
 
 #sidebarButton.active span:nth-of-type(3) {
     -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg); 
     top: -8px;
 }
 
 #side-menu {
-    background-color: #ffffff;
     position: fixed;
-    top: 0;
-    right: -310px;
+    top: 80px;
+    right: -100%;
     z-index: 1000;
-    width: 300px;
-    height: 100%;
+    width: 100%;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     padding: 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 #side-menu.active {
     right: 0;
 }
 
-#close-button {
-    width: 26px;
-    height: 26px;
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    z-index: 12;
+#side-menu ~ * {
+    transition: filter 400ms cubic-bezier(.4, 0, .2, 1);
 }
 
-#close-button > span {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    border-radius: 6px;
-    background: #232323;
+#side-menu.active ~ * {
+    filter: blur(10px);
+    pointer-events: none;
 }
 
-#close-button > span.top {
-    top: 12px;
-    left: 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-#close-button > span.bottom {
-    bottom: 12px;
-    left: 0;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-#links {
-    margin: 100px 20px 0 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-#links > a {
+#side-menu > a {
+    font-size: 18px;
     margin: 10px 0; 
-    padding: 14px 12px;
+    padding: 14px;
+    background: #e8e8e8;
+    text-align: right;
 }
 
 /* Styles for other pages */
