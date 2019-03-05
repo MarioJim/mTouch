@@ -1,12 +1,12 @@
 #why {
-    padding: 0 30px 20px 30px;
+    padding: 0 5% 10px 5%;
 }
 
 #why > p {
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     line-height: 160%;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 1000px;
 }
 
@@ -39,6 +39,7 @@
 }
 
 #competitors > div > div {
+    margin-bottom: 15px;
     width: 60%;
 }
 
@@ -48,7 +49,6 @@
 
 #competitors p {
     text-align: justify;
-    padding: 0;
 }
 
 @media (max-width: 750px) {

@@ -1,7 +1,3 @@
-h2 {
-    margin-bottom: 0;
-}
-
 #personas {
     display: flex;
     overflow-x: scroll;
@@ -35,9 +31,7 @@ h2 {
 }
 
 #personas > div > h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 32px;
-    margin-bottom: 0;
+    font-size: 30px;
 }
 
 #personas > div > img {
@@ -46,7 +40,7 @@ h2 {
 }
 
 #personas > div > p {
-    padding: 0 40px;
+    padding: 15px 40px;
 }
 
 #personas > div > p:first-of-type {

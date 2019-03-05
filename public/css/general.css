@@ -17,7 +17,6 @@ header {
     background: #fff;
 }
 
-
 header, section{
     border-bottom: 1px solid #DCDEDD;
 }
@@ -57,10 +56,6 @@ header a, #side-menu > a {
     transition-duration: 0.4s;
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
-}
-
-header a:first-of-type {
-    margin-left: 0;
 }
 
 #menu > a:hover, #side-menu > a:hover {
@@ -146,14 +141,19 @@ header a:first-of-type {
 
 /* Styles for other pages */
 
-h2 {
+h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
-    margin: 25px 0 15px 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin: 25px 0 0 0;
     text-align: center;
     font-size: 36px;
 }
 
 p {
+    margin: 0;
     font-size: 18px;
     text-align: center;
 }
