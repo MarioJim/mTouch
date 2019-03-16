@@ -11,17 +11,19 @@
     <link href="css/index.css" rel="stylesheet">
     <script>
         const toggleNav = () => {
-            document.getElementById("sidebarButton").classList.toggle("active");
-            document.getElementById("side-menu").classList.toggle("active");
+            document.getElementById('sidebarButton').classList.toggle('active');
+            document.getElementById('side-menu').classList.toggle('active');
         }
-        const closeNav = () => {
-            document.getElementById("sidebarButton").classList.remove("active");
-            document.getElementById("side-menu").classList.remove("active");
+        const checkNav = () => {
+            if (window.innerWidth > 980) {
+                document.getElementById('sidebarButton').classList.remove('active');
+                document.getElementById('side-menu').classList.remove('active');
+            }
         }
     </script>
 </head>
 
-<body>
+<body onresize="checkNav()">
     <header>
         <a href="./index.html">
             <div id="logo">
