@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High level prototype</title>
+    <!-- Google Analytics - Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136702959-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-136702959-1');
+    </script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/high_level_prototype.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        const toggleNav = () => {
+            $('#sidebarButton').toggleClass('active');
+            $('nav').toggleClass('active');
+        }
+
+        $(document).ready(() => {
+            $('#logbtn').on('click', () => {
+                $('section').hide();
+                $('#main').show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 
+        ideas for nav bar and side menu
+        https://material-components.github.io/material-components-web-catalog/#/component/drawer/modal 
+        https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar/fixed
+    -->
+    <nav>
+        <p>My account</p>
+        <p>Edit devices</p>
+        <p>Edit gestures</p>
+        <p>Help</p>
+        <p>Feedback</p>
+    </nav>
+    <section id="login">
+        <img src="img/high-level-prototype/logo.svg">
+        <div id="logbtn">
+            <p>Login</p>
+        </div>
+        <div id="regbtn">
+            <p>Register</p>
+        </div>
+    </section>
+    <section id="main">
+        <header>
+            <div id="sidebarButton" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <div id="addDevice">
+            <p>+</p>
+        </div>
+    </section>
+</body>
+
+</html>

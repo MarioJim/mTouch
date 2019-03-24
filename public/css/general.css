@@ -76,8 +76,7 @@ header a, #side-menu > a {
     border-radius: 3px;
     display: block;
     height: 3px;
-    margin-top: 5px;
-    margin-right: 10px;
+    margin: 5px 10px 0 10px;
     transition-duration: 300ms;
     width: 30px;
     cursor: pointer;

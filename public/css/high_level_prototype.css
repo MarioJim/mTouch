@@ -1,0 +1,83 @@
+body { margin: 0; }
+
+section:not(#login) { display: none; }
+
+/* Nav */
+
+nav {
+    position: fixed;
+    top: 60px;
+    left: -50%;
+    bottom: 0;
+    width: 45%;
+    transition-duration: 500ms;
+    z-index: 1000;
+    background: #DDD;
+}
+
+nav.active { left: 0; }
+nav > p { line-height: 50px; } 
+
+section {
+    border-bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Login */
+
+#login {
+    background-image: url("../img/high-level-prototype/bg_login.jpg");
+    background-size: cover;
+}
+
+#login > img {
+    width: 60vw;
+    margin: 16vh 20vw;
+    border-radius: 50%;
+    box-shadow: 0px 0px 64px 0px rgba(0,0,0,0.7);
+}
+
+#login > div {
+    width: 60vw;
+    margin: 3vh 20vw;
+    box-sizing: border-box;
+    padding: 4vw 0;
+    border-radius: 15px;
+}
+
+#login > div > p { color: white; }
+#logbtn { background: #26a69a; }
+#regbtn { background: #00897b; }
+
+/* Main */
+
+#main { background: #FFF; }
+
+#main > header {
+    border-bottom: 0;
+    background: #00bfa5;
+    height: 60px;
+}
+
+#sidebarButton > span {
+    background-color: whitesmoke;
+}
+
+#addDevice {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #008e76;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+#addDevice > p {
+    font-size: 40px;
+    color: #FFF;
+}
