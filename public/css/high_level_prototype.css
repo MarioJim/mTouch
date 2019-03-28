@@ -76,7 +76,6 @@ section {
     width: 70vw;
     box-sizing: border-box;
     background-color: #FFFFFFB0;
-    border: 4px solid teal;
     border-radius: 15px;
     font-size: 22px;
     text-align: center;
@@ -84,16 +83,28 @@ section {
     margin-bottom: 10px;
 }
 
-#logform input::placeholder { color: #777; }
+#logform input { border: 4px solid #26a69a; }
+#regform input { border: 4px solid #00897b; }
+
+#logform input::placeholder,
+#regform input::placeholder { color: #777; }
 
 /* Main */
 
 #main { background: #FFF; }
 
 #main > header {
+    position: fixed;
     border-bottom: 0;
     background: #00bfa5;
+    width: 100vw;
     height: 60px;
+    transition: box-shadow .2s linear,-webkit-box-shadow .2s linear;
+    
+}
+
+#main > header.scrolled {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 
 #sidebarButton > span { background-color: whitesmoke; }
@@ -114,3 +125,20 @@ section {
     font-size: 40px;
     color: #FFF;
 }
+
+#content { margin-top: 60px; }
+#content > div {
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+div.gesture {
+    border: 1px solid #888;
+    margin: 10px;
+    padding: 14px;
+}
+
+div.gesture > h5 {
+    margin: 0;
+} 

@@ -22,7 +22,9 @@
     <link href="css/general.css" rel="stylesheet">
     <link href="css/high_level_prototype.css" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app/navigation.mjs"></script>
+    <script type="module" src="js/app/validateInputs.mjs"></script>
+    <script type="module" src="js/app.js"></script>
 </head>
 
 <body class="preload">
@@ -42,15 +44,15 @@
         <img src="img/high-level-prototype/logo.svg" alt="Knocki logo">
         <div id="logform">
             <form>
-                <input type="email" class="mail" placeholder="E-mail" />
-                <input type="password" class="password" placeholder="Password" />
+                <input type="user" class="user" placeholder="User" />
+                <input type="password" class="password" placeholder="Password" current-password />
             </form>
         </div>
         <div id="regform">
             <form>
                 <input type="user" class="user" placeholder="User" />
                 <input type="email" class="mail" placeholder="E-mail" />
-                <input type="password" class="password" placeholder="Password" />
+                <input type="password" class="password" placeholder="Password" new-password />
             </form>
         </div>
         <div id="logbtn">
@@ -62,16 +64,61 @@
     </section>
     <section id="main">
         <header>
-            <div id="sidebarButton" onclick="toggleNav()">
+            <div id="sidebarButton">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </header>
+        <div id="content">
+            <div id="listGestures">
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
 
-        <div id="addDevice">
-            <p>+</p>
+                <div id="addDevice">
+                    <p>+</p>
+                </div>
+            </div>
         </div>
+
     </section>
 </body>
 
