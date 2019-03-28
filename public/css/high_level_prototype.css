@@ -100,7 +100,6 @@ section {
     width: 100vw;
     height: 60px;
     transition: box-shadow .2s linear,-webkit-box-shadow .2s linear;
-    
 }
 
 #main > header.scrolled {
