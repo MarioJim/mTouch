@@ -25,4 +25,20 @@ $(document).ready(() => {
     else
       $('#main > header').addClass('scrolled');
   }, { passive: true });
+  // Add event listeners to nav buttons
+  $('#btnDevices').on('click', () => {
+    toggleSidemenu('close');
+    $('#content > div').fadeOut();
+    $('#listDevices').fadeIn();
+  });
+  $('#btnGestures').on('click', () => {
+    toggleSidemenu('close');
+    $('#content > div').fadeOut();
+    $('#listGestures').fadeIn();
+  });
+  $('#btnLogOut').on('click', () => {
+    toggleSidemenu('close');
+    $('#main').fadeOut();
+    $('#login').fadeIn();
+  });
 });

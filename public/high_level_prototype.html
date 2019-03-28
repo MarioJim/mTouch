@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Knocki PWA">
     <meta name="theme-color" content="#00bfa5" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00bfa5">
     <link rel="manifest" href="./manifest.json">
     <title>High level prototype</title>
     <!-- Google Analytics - Global site tag (gtag.js) -->
@@ -34,11 +35,11 @@
         https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar/fixed
     -->
     <nav>
-        <p>My account</p>
-        <p>Edit devices</p>
-        <p>Edit gestures</p>
-        <p>Help</p>
-        <p>Feedback</p>
+        <p id="btnAccount">My account</p>
+        <p id="btnGestures">Gestures</p>
+        <p id="btnDevices">Devices</p>
+        <p id="btnHelp">Help</p>
+        <p id="btnLogOut">Log out</p>
     </nav>
     <section id="login">
         <img src="img/high-level-prototype/logo.svg" alt="Knocki logo">
@@ -112,9 +113,115 @@
                     <h5>Play</h5>
                     <div><br><br></div>
                 </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+                <div class="gesture">
+                    <h5>Play</h5>
+                    <div><br><br></div>
+                </div>
+
+                <div id="addGesture">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
+                    </svg>
+                </div>
+            </div>
+            <div id="listDevices">
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+                <div class="device">
+                    <img src="img/high-level-prototype/logo.svg">
+                    <div>
+                        <h5>In bedroom</h5>
+                    </div>
+                </div>
+
+
 
                 <div id="addDevice">
-                    <p>+</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
+                    </svg>
                 </div>
             </div>
         </div>

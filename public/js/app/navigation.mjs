@@ -17,7 +17,15 @@ export const moveToMain = () => {
   $('#main').fadeIn();
 };
 
-export const toggleSidemenu = () => {
-  $('#sidebarButton').toggleClass('active');
-  $('nav').toggleClass('active');
+export const toggleSidemenu = (action = 'toggle') => {
+  switch (action) {
+    case 'toggle':
+      $('#sidebarButton').toggleClass('active');
+      $('nav').toggleClass('active');
+      break;
+    case 'close':
+      $('#sidebarButton').removeClass('active');
+      $('nav').removeClass('active');
+      break;
+  }
 };
