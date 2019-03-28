@@ -21,24 +21,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/high_level_prototype.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        const toggleNav = () => {
-            $('#sidebarButton').toggleClass('active');
-            $('nav').toggleClass('active');
-        }
-
-        $(document).ready(() => {
-            $('#logbtn').on('click', () => {
-                $('section').hide();
-                $('#main').show();
-            });
-        });
-    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
-<body>
+<body class="preload">
     <!-- 
         ideas for nav bar and side menu
         https://material-components.github.io/material-components-web-catalog/#/component/drawer/modal 
@@ -53,6 +40,19 @@
     </nav>
     <section id="login">
         <img src="img/high-level-prototype/logo.svg" alt="Knocki logo">
+        <div id="logform">
+            <form>
+                <input type="email" class="mail" placeholder="E-mail" />
+                <input type="password" class="password" placeholder="Password" />
+            </form>
+        </div>
+        <div id="regform">
+            <form>
+                <input type="user" class="user" placeholder="User" />
+                <input type="email" class="mail" placeholder="E-mail" />
+                <input type="password" class="password" placeholder="Password" />
+            </form>
+        </div>
         <div id="logbtn">
             <p>Login</p>
         </div>
