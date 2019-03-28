@@ -6,7 +6,7 @@ section:not(#login) { display: none; }
 nav {
     position: fixed;
     top: 60px;
-    left: -50%;
+    right: -50%;
     bottom: 0;
     width: 45%;
     transition-duration: 500ms;
@@ -15,7 +15,7 @@ nav {
     padding: 6px 0;
 }
 
-nav.active { left: 0; }
+nav.active { right: 0; }
 nav > p {
     line-height: 46px;
     margin: 10px 12px;
@@ -87,18 +87,23 @@ section {
 /* Main */
 #main { background: #FFF; }
 
-#main > header {
+header {
     position: fixed;
     border-bottom: 0;
     background: #00bfa5;
-    width: 100vw;
+    width: 94vw;
     height: 60px;
     transition: box-shadow .2s linear,-webkit-box-shadow .2s linear;
+    display: flex;
 }
 
-#main > header.scrolled {
+header.scrolled {
     box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
+
+header > h4 { margin: 10px; color: #FFF; }
+
+#sidebarButton { float: right; }
 
 #sidebarButton > span { background-color: whitesmoke; }
 
@@ -127,6 +132,7 @@ div.device {
     display: inline-grid;
     grid-column-gap: 20px;
     grid-template-columns: 20vw auto;
+    display: none;
 }
 
 div.device > img { width: 20vw; }
@@ -149,6 +155,7 @@ div.device > div > h5 { margin: 0; }
     width: 56px;
     height: 56px;
     margin: auto;
+    background: #FFF;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 }
 
