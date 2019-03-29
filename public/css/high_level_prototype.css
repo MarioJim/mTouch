@@ -1,4 +1,4 @@
-body { margin: 0; }
+body { margin: 0; cursor: pointer; }
 body.preload * { transition: none; }
 section:not(#login) { display: none; }
 

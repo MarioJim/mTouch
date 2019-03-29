@@ -6,26 +6,26 @@ $(document).ready(() => {
   // To remove animations/transitions while loading
   $('body').removeClass('preload');
   // To open the sidebar
-  $('#sidebarButton').on('click touch', () => toggleSidemenu());
+  $('#sidebarButton').on('click', () => toggleSidemenu());
   $(".swipe-area").swipe({
     swipeStatus: function (event, phase, direction, distance, duration, fingers) {
       if (phase === "move" && direction === "right") {
-        toggleSidemenu();
+        toggleSidemenu('close');
         return false;
       } else if (phase === "move" && direction === "left") {
-        toggleSidemenu();
+        toggleSidemenu('open');
         return false;
       }
     }
   });
   // Validate input for login
-  $('#logbtn').on('click touch', () => {
+  $('#logbtn').on('click', () => {
     const result = validateLogin();
     if (result.state === 'valid') moveToMain();
     else if (result.state === 'empty') emptyInputs('login');
   });
   // Validate input for register
-  $('#regbtn').on('click touch', () => {
+  $('#regbtn').on('click', () => {
     const result = validateRegister();
     if (result.state === 'valid') moveToMain();
     else if (result.state === 'empty') emptyInputs('register');

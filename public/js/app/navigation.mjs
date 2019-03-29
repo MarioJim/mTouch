@@ -23,6 +23,10 @@ export const toggleSidemenu = (action = 'toggle') => {
       $('#sidebarButton').toggleClass('active');
       $('nav').toggleClass('active');
       break;
+    case 'open':
+      $('#sidebarButton').addClass('active');
+      $('nav').addClass('active');
+      break;
     case 'close':
       $('#sidebarButton').removeClass('active');
       $('nav').removeClass('active');
