@@ -23,7 +23,7 @@
     <link href="css/general.css" rel="stylesheet">
     <link href="css/high_level_prototype.css" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/store.everything.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
     <script type="module" src="js/app/navigation.mjs"></script>
     <script type="module" src="js/app/toggles.mjs"></script>
     <script type="module" src="js/app/validateInputs.mjs"></script>
@@ -31,10 +31,6 @@
 </head>
 
 <body class="preload">
-    <!-- 
-        ideas for nav bar and side menu
-        https://material-components.github.io/material-components-web-catalog/#/component/drawer/modal 
-    -->
     <nav>
         <p id="btnAccount" data-screen="">My account</p>
         <p id="btnGestures" data-screen="#listGestures">Gestures</p>
@@ -64,7 +60,7 @@
             <p>Register</p>
         </div>
     </section>
-    <section id="main">
+    <section id="main" class="swipe-area">
         <header>
             <h4></h4>
             <div id="sidebarButton">
@@ -96,7 +92,20 @@
                 </div>
             </div>
             <div id="addGesture">
+                <h3>Add a gesture</h3>
+                <div>
+                    <div class="iconDev">
+                        <img src="img/high-level-prototype/icons/price-tag.svg">
+                    </div>
+                    <div class="inp">
+                        <h4>Name</h4>
+                        <input type="text" class="name">
+                    </div>
+                </div>
 
+                <div id="doneAddGesture">
+                    <p>Done</p>
+                </div>
             </div>
             <div id="listDevices">
                 <div class="device">

@@ -213,21 +213,25 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
 
 
 /* Add Device */
-#addDevice { display: none; position: relative; }
+#addDevice,
+#addGesture { display: none; position: relative; }
 
-#addDevice > h3 {
+#addDevice > h3,
+#addGesture > h3 {
     text-align: center;
     margin: 0 0 12px 0;
 }
 
-#addDevice > div:not(#doneAddDevice) {
+#addDevice > div:not(#doneAddDevice),
+#addGesture > div:not(#doneAddGesture) {
     margin: 10px 0;
     display: grid;
     grid-template-columns: 20vw auto;
     grid-column-gap: 10px;
 }
 
-#addDevice > div > div.iconDev {
+#addDevice > div > div.iconDev,
+#addGesture > div > div.iconDev {
     margin: 3vw;
     width: 14vw;
     height: 14vw;
@@ -235,25 +239,29 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
     border-radius: 50%;
 }
 
-#addDevice > div > div.iconDev > img {
+#addDevice > div > div.iconDev > img,
+#addGesture > div > div.iconDev > img {
     filter: invert(90);
     margin: 20%;
     width: 60%;
     height: 60%;
 }
 
-#addDevice > div > div.inp > h4 {
+#addDevice > div > div.inp > h4,
+#addGesture > div > div.inp > h4 {
     margin: 12px 0 6px 0;
 }
 
-#addDevice > div > div.inp > input {
+#addDevice > div > div.inp > input,
+#addGesture > div > div.inp > input {
     border: 0;
     border-bottom: 2px solid #888;
     width: 94%;
     font-size: 16px;
 }
 
-#addDevice > #doneAddDevice {
+#addDevice > #doneAddDevice,
+#addGesture > #doneAddGesture {
     background: teal;
     margin: 0 12vw;
     padding: 10px;
@@ -264,4 +272,5 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
     bottom: 40px;
 }
 
-#addDevice > #doneAddDevice > p { color: white; }
+#addDevice > #doneAddDevice > p,
+#addGesture > #doneAddGesture > p { color: white; }

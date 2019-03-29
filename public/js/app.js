@@ -7,6 +7,17 @@ $(document).ready(() => {
   $('body').removeClass('preload');
   // To open the sidebar
   $('#sidebarButton').on('click touch', () => toggleSidemenu());
+  $(".swipe-area").swipe({
+    swipeStatus: function (event, phase, direction, distance, duration, fingers) {
+      if (phase === "move" && direction === "right") {
+        toggleSidemenu();
+        return false;
+      } else if (phase === "move" && direction === "left") {
+        toggleSidemenu();
+        return false;
+      }
+    }
+  });
   // Validate input for login
   $('#logbtn').on('click touch', () => {
     const result = validateLogin();
@@ -37,10 +48,14 @@ $(document).ready(() => {
       $($(this).attr('data-screen')).fadeIn();
     }
   });
-  // Bing add buttons to their screens
+  // Bind add buttons to their screens
   $('#addDeviceBtn').on('click', () => {
     $('#content > div').hide();
     $('#addDevice').fadeIn();
+  });
+  $('#addGestureBtn').on('click', () => {
+    $('#content > div').hide();
+    $('#addGesture').fadeIn();
   })
   // Bind toggles to devices at deviceList
   $('div.device > label.switch > input').on('click', function () {
