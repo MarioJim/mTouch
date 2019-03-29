@@ -23,7 +23,9 @@
     <link href="css/general.css" rel="stylesheet">
     <link href="css/high_level_prototype.css" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/store.everything.min.js"></script>
     <script type="module" src="js/app/navigation.mjs"></script>
+    <script type="module" src="js/app/toggles.mjs"></script>
     <script type="module" src="js/app/validateInputs.mjs"></script>
     <script type="module" src="js/app.js"></script>
 </head>
@@ -32,14 +34,13 @@
     <!-- 
         ideas for nav bar and side menu
         https://material-components.github.io/material-components-web-catalog/#/component/drawer/modal 
-        https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar/fixed
     -->
     <nav>
-        <p id="btnAccount">My account</p>
-        <p id="btnGestures">Gestures</p>
-        <p id="btnDevices">Devices</p>
-        <p id="btnHelp">Help</p>
-        <p id="btnLogOut">Log out</p>
+        <p id="btnAccount" data-screen="">My account</p>
+        <p id="btnGestures" data-screen="#listGestures">Gestures</p>
+        <p id="btnDevices" data-screen="#listDevices">Devices</p>
+        <p id="btnHelp" data-screen="">Help</p>
+        <p id="btnLogOut" data-screen="#login">Log out</p>
     </nav>
     <section id="login">
         <img src="img/high-level-prototype/logo.svg" alt="Knocki logo">
@@ -65,7 +66,7 @@
     </section>
     <section id="main">
         <header>
-            <h4>Main screen</h4>
+            <h4></h4>
             <div id="sidebarButton">
                 <span></span>
                 <span></span>
@@ -86,147 +87,77 @@
                     <h5>Play</h5>
                     <div><br><br></div>
                 </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
-                <div class="gesture">
-                    <h5>Play</h5>
-                    <div><br><br></div>
-                </div>
 
-                <div id="addGesture">
+                <div id="addGestureBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
                     </svg>
                 </div>
+            </div>
+            <div id="addGesture">
+
             </div>
             <div id="listDevices">
                 <div class="device">
                     <img src="img/high-level-prototype/logo.svg">
                     <div>
                         <h5>In bedroom</h5>
+                        <span>Status:</span>
+                        <span class="on">Online</span>
+                        <span class="off">Offline</span>
                     </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
                 </div>
                 <div class="device">
                     <img src="img/high-level-prototype/logo.svg">
                     <div>
                         <h5>In bedroom</h5>
+                        <span>Status:</span>
+                        <span class="on">Online</span>
+                        <span class="off">Offline</span>
                     </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
-                </div>
-                <div class="device">
-                    <img src="img/high-level-prototype/logo.svg">
-                    <div>
-                        <h5>In bedroom</h5>
-                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
                 </div>
 
-
-
-                <div id="addDevice">
+                <div id="addDeviceBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
                     </svg>
                 </div>
             </div>
+            <div id="addDevice">
+                <h3>Configure your Knocki device</h3>
+                <div>
+                    <div class="iconDev">
+                        <img src="img/high-level-prototype/icons/location.svg">
+                    </div>
+                    <div class="inp">
+                        <h4>Room</h4>
+                        <input type="text" class="room">
+                    </div>
+                </div>
+                <div>
+                    <div class="iconDev">
+                        <img src="img/high-level-prototype/icons/surface.svg">
+                    </div>
+                    <div class="inp">
+                        <h4>Surface</h4>
+                        <input type="text" class="surface">
+                    </div>
+                </div>
+                <div id="doneAddDevice">
+                    <p>Done</p>
+                </div>
+            </div>
         </div>
-
     </section>
 </body>
 

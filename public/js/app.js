@@ -1,5 +1,6 @@
 import { validateLogin, validateRegister } from "./app/validateInputs.mjs";
 import { emptyInputs, moveToMain, toggleSidemenu } from "./app/navigation.mjs";
+import * as toggle from "./app/toggles.mjs";
 
 $(document).ready(() => {
   // To remove animations/transitions while loading
@@ -26,19 +27,26 @@ $(document).ready(() => {
       $('#main > header').addClass('scrolled');
   }, { passive: true });
   // Add event listeners to nav buttons
-  $('#btnDevices').on('click', () => {
+  $('nav > p').on('click', function () {
     toggleSidemenu('close');
-    $('#content > div').fadeOut();
-    $('#listDevices').fadeIn();
+    if ($(this).attr('data-screen') === '#login') {
+      $('#main').hide();
+      $('#login').fadeIn();
+    } else if ($(this).attr('data-screen') !== '') {
+      $('#content > div').hide();
+      $($(this).attr('data-screen')).fadeIn();
+    }
   });
-  $('#btnGestures').on('click', () => {
-    toggleSidemenu('close');
-    $('#content > div').fadeOut();
-    $('#listGestures').fadeIn();
-  });
-  $('#btnLogOut').on('click', () => {
-    toggleSidemenu('close');
-    $('#main').fadeOut();
-    $('#login').fadeIn();
+  // Bing add buttons to their screens
+  $('#addDeviceBtn').on('click', () => {
+    $('#content > div').hide();
+    $('#addDevice').fadeIn();
+  })
+  // Bind toggles to devices at deviceList
+  $('div.device > label.switch > input').on('click', function () {
+    if ($(this).prop('checked'))
+      toggle.device($(this).parent().parent(), 'on');
+    else
+      toggle.device($(this).parent().parent(), 'off');
   });
 });
