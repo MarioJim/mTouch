@@ -21,13 +21,11 @@ export const saveRegisteredUser = async (user, callback) => {
     mail: user.mail,
     pass: user.pass,
     devices: [
-      { room: 'Bedroom', surface: 'Under table', isOn: true },
       { room: 'Bedroom', surface: 'Wall', isOn: false },
-      { room: 'Living room', surface: 'Wall', isOn: true },
+      { room: 'Living room', surface: 'Under table', isOn: true },
     ],
     gestures: [
       { name: 'Play music', pattern: [true] },
-      { name: 'Order pizza', pattern: [true, true] },
       { name: 'Find my phone', pattern: [true, false, true] },
       { name: 'Unlock smart door', pattern: [false, true, false, true] },
     ],

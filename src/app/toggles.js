@@ -86,4 +86,4 @@ export const setupDevicesToggles = () => {
   });
 };
 
-export const gesture = () => {};
+export const setupGestureToggles = () => {};
