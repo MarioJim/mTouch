@@ -1,4 +1,6 @@
-export const emptyInputs = (button) => {
+import $ from 'jquery';
+
+export const ifEmptyInputs = button => {
   switch (button) {
     case 'login':
       $('#regbtn').slideToggle();
@@ -9,6 +11,8 @@ export const emptyInputs = (button) => {
       $('#logbtn').slideToggle();
       $('#login > img').toggleClass('onLogin');
       $('#regform > form').slideToggle();
+      break;
+    default:
   }
 };
 
@@ -31,5 +35,6 @@ export const toggleSidemenu = (action = 'toggle') => {
       $('#sidebarButton').removeClass('active');
       $('nav').removeClass('active');
       break;
+    default:
   }
 };

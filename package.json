@@ -2,9 +2,10 @@
   "name": "mtouch",
   "version": "1.0.0",
   "description": "Design Fundamentals final project",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,15 @@
   },
   "homepage": "https://github.com/MarioJim/mTouch#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "jquery-touchswipe": "^1.6.19"
   },
   "engines": {
     "node": "11.x"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

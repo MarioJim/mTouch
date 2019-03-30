@@ -257,6 +257,7 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
     border: 0;
     border-bottom: 2px solid #888;
     width: 94%;
+    height: 20px;
     font-size: 16px;
 }
 
@@ -274,3 +275,28 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
 
 #addDevice > #doneAddDevice > p,
 #addGesture > #doneAddGesture > p { color: white; }
+
+/* My Account */
+#myAccount { display: none; }
+
+#myAccount > img {
+    display: block;
+    margin: 0 auto;
+    width: 32vw;
+}
+
+#myAccount > h4 { margin: 20px 20px 10px 20px; }
+#myAccount > p { font-family: 'Montserrat'; }
+
+/* Settings */
+#settings { display: none; }
+
+#settings > div {
+    border-bottom: 1px solid #888;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: auto 14vw;
+    grid-column-gap: 20px;
+}
+
+#settings > div > p { text-align: left; }

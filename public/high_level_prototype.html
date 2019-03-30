@@ -22,22 +22,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/high_level_prototype.css" rel="stylesheet">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
-    <script type="module" src="js/app/navigation.mjs"></script>
-    <script type="module" src="js/app/toggles.mjs"></script>
-    <script type="module" src="js/app/validateInputs.mjs"></script>
-    <script type="module" src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body class="preload">
-    <nav>
-        <p id="btnAccount" data-screen="">My account</p>
-        <p id="btnGestures" data-screen="#listGestures">Gestures</p>
-        <p id="btnDevices" data-screen="#listDevices">Devices</p>
-        <p id="btnHelp" data-screen="">Help</p>
-        <p id="btnLogOut" data-screen="#login">Log out</p>
-    </nav>
     <section id="login">
         <img src="img/high-level-prototype/logo.svg" alt="Knocki logo">
         <div id="logform">
@@ -60,7 +48,7 @@
             <p>Register</p>
         </div>
     </section>
-    <section id="main" class="swipe-area">
+    <section id="main">
         <header>
             <h4></h4>
             <div id="sidebarButton">
@@ -69,7 +57,7 @@
                 <span></span>
             </div>
         </header>
-        <div id="content">
+        <div id="content" class="swipe-area">
             <div id="listGestures">
                 <div class="gesture">
                     <h5>Play</h5>
@@ -102,7 +90,6 @@
                         <input type="text" class="name">
                     </div>
                 </div>
-
                 <div id="doneAddGesture">
                     <p>Done</p>
                 </div>
@@ -166,8 +153,47 @@
                     <p>Done</p>
                 </div>
             </div>
+            <div id="settings">
+                <div>
+                    <p>Notifications</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div>
+                    <p>Allow access to location</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div>
+                    <p>Send technical and interaction data to mTouch</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="myAccount">
+                <img src="img/high-level-prototype/icons/avatar.svg">
+                <h4>Name</h4>
+                <p>Felix Jensen</p>
+                <h4>Username</h4>
+                <p>felixjensen</p>
+                <h4>Email</h4>
+                <p>felixjensen@gmail.com</p>
+            </div>
         </div>
     </section>
+    <nav>
+        <p id="btnGestures" data-screen="#listGestures">Gestures</p>
+        <p id="btnDevices" data-screen="#listDevices">Devices</p>
+        <p id="btnAccount" data-screen="#settings">Settings</p>
+        <p id="btnAccount" data-screen="#myAccount">My account</p>
+        <p id="btnLogOut" data-screen="#login">Log out</p>
+    </nav>
 </body>
 
 </html>
