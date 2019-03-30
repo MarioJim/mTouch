@@ -122,7 +122,9 @@ div.gesture {
     border-radius: 10px;
 }
 
-div.gesture > h5 { margin: 0; }
+div.gesture > h5 { margin: 0; font-size: 16px; }
+div.gesture > div { height: 12vw; margin-top: 2vw; }
+div.gesture > div > img { height: 12vw; }
 
 /* List devices */
 #listDevices { display: none; }

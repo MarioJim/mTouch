@@ -1,4 +1,7 @@
 import $ from 'jquery';
+import generateMain from './generate';
+import { validateLogin, validateRegister } from './validateInputs';
+import * as ls from './localStorageFunctions';
 
 export const ifEmptyInputs = button => {
   switch (button) {
@@ -16,12 +19,13 @@ export const ifEmptyInputs = button => {
   }
 };
 
-export const moveToMain = () => {
+export const moveToMain = async () => {
+  await generateMain();
   $('#login').fadeOut();
   $('#main').fadeIn();
 };
 
-export const toggleSidemenu = (action = 'toggle') => {
+const toggleSidemenu = (action = 'toggle') => {
   switch (action) {
     case 'toggle':
       $('#sidebarButton').toggleClass('active');
@@ -37,4 +41,51 @@ export const toggleSidemenu = (action = 'toggle') => {
       break;
     default:
   }
+};
+
+export const setupNavBtns = () => {
+  $('nav > p').on('click', event => {
+    toggleSidemenu('close');
+    if ($(event.currentTarget).attr('data-screen') === '#login') {
+      $('#main').hide();
+      $('#login').fadeIn();
+    } else if ($(event.currentTarget).attr('data-screen') !== '') {
+      $('#content > div').hide();
+      $($(event.currentTarget).attr('data-screen')).fadeIn();
+    }
+  });
+};
+
+export const setupSideMenuInteractions = () => {
+  $('#sidebarButton').on('click', () => toggleSidemenu());
+  $('.swipe-area').swipe({
+    // eslint-disable-next-line consistent-return
+    swipeStatus(event, phase, direction) {
+      if (phase === 'move' && direction === 'right') {
+        toggleSidemenu('close');
+        return false;
+        // eslint-disable-next-line no-else-return
+      } else if (phase === 'move' && direction === 'left') {
+        toggleSidemenu('open');
+        return false;
+      }
+    },
+  });
+  $('.swipe-area').click(() => toggleSidemenu('close'));
+};
+
+export const setupLoginBtn = () => {
+  $('#logbtn').on('click', () => {
+    const result = validateLogin();
+    if (result.state === 'valid') ls.loginAs(result, moveToMain);
+    else if (result.state === 'empty') ifEmptyInputs('login');
+  });
+};
+
+export const setupRegisterBtn = () => {
+  $('#regbtn').on('click', () => {
+    const result = validateRegister();
+    if (result.state === 'valid') ls.saveRegisteredUser(result, moveToMain);
+    else if (result.state === 'empty') ifEmptyInputs('register');
+  });
 };
