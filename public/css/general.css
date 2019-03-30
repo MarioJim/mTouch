@@ -35,7 +35,7 @@ h1 {
 }
 
 #logo > img {
-    margin-top: 3px;
+    margin-top: 4px;
     height: 45%;
 }
 
@@ -65,7 +65,7 @@ header a, #side-menu > a {
     display: none;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1050px) {
     #menu { display: none; }
     #sidebarButton { display: inline-block; }
 }

@@ -1,0 +1,27 @@
+#videos {
+    padding: 0 40px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#videos > iframe {
+    width: 512px;
+    height: 288px;
+    margin: 10px;
+}
+
+@media (max-width: 630px) {
+    #videos > iframe {
+        width: calc(100vw - 80px);
+        max-height: 288px;
+        height: calc(calc(100vw - 80px) * 9 / 16);
+    }
+}
+
+#findings { padding: 0 5vw 5vw 5vw; }
+
+#findings ul { list-style-image: url('../img/think-aloud-tests/bullet.svg'); }
+
+#findings li { font-size: 18px; }

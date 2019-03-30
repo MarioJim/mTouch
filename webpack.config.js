@@ -4,8 +4,9 @@ module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'public/js')
+    path: path.resolve(__dirname, 'public/js'),
   },
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: 'production',
+  // mode: 'development',
+  // devtool: 'inline-source-map',
 };
