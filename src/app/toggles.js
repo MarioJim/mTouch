@@ -79,7 +79,6 @@ export const setupDevicesToggles = () => {
       .parent()
       .parent()
       .index();
-    console.log(index);
     const devices = await ls.getDevices();
     devices[index].isOn = !devices[index].isOn;
     await ls.setDevices(devices);

@@ -13,28 +13,9 @@ export const setupAddBtns = () => {
   });
 };
 
-export const setupDoneAddDevice = () => {
-  $('#doneAddDevice').on('click', async () => {
-    const room = $('.inp > .room').val();
-    const surface = $('.inp > .surface').val();
-    if (room.length === 0) alert('Enter a Room name');
-    else if (surface.length === 0) alert('Enter a Surface name');
-    else {
-      const devices = await ls.getDevices();
-      devices.push({ room, surface, isOn: true });
-      await ls.setDevices(devices);
-      await generateMain();
-      $('#addDevice').fadeOut();
-      $('#listDevices').fadeIn();
-      $('.inp > .room').val('');
-      $('.inp > .surface').val('');
-    }
-  });
-};
-
 export const setupDoneAddGesture = () => {
   $('#doneAddGesture').on('click', async () => {
-    const name = $('.inp > .name').val();
+    const name = $('#addGesture .name').val();
     if (name.length === 0) alert('Enter a name for the gesture');
     else {
       const gestures = await ls.getGestures();
@@ -45,7 +26,26 @@ export const setupDoneAddGesture = () => {
       await generateMain();
       $('#addGesture').fadeOut();
       $('#listGestures').fadeIn();
-      $('.inp > .name').val('');
+      $('#addGesture .name').val('');
+    }
+  });
+};
+
+export const setupDoneAddDevice = () => {
+  $('#doneAddDevice').on('click', async () => {
+    const room = $('#addDevice .room').val();
+    const surface = $('#addDevice .surface').val();
+    if (room.length === 0) alert('Enter a Room name');
+    else if (surface.length === 0) alert('Enter a Surface name');
+    else {
+      const devices = await ls.getDevices();
+      devices.push({ room, surface, isOn: true });
+      await ls.setDevices(devices);
+      await generateMain();
+      $('#addDevice').fadeOut();
+      $('#listDevices').fadeIn();
+      $('#addDevice .room').val('');
+      $('#addDevice .surface').val('');
     }
   });
 };

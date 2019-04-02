@@ -70,8 +70,8 @@ export const setupSideMenuInteractions = () => {
         return false;
       }
     },
+    allowPageScroll: 'vertical',
   });
-  $('.swipe-area').click(() => toggleSidemenu('close'));
 };
 
 export const setupLoginBtn = () => {

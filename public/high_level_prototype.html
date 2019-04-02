@@ -22,7 +22,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/high_level_prototype.css" rel="stylesheet">
-    <script src="js/app.js"></script>
 </head>
 
 <body class="preload">
@@ -75,6 +74,24 @@
                     <p>Done</p>
                 </div>
             </div>
+            <div id="editGesture">
+                <h3>Edit a gesture</h3>
+                <div>
+                    <div class="iconDev">
+                        <img src="img/high-level-prototype/icons/price-tag.svg">
+                    </div>
+                    <div class="inp">
+                        <h4>Name</h4>
+                        <input type="text" class="name">
+                    </div>
+                </div>
+                <div id="deleteEditGesture">
+                    <p>Delete</p>
+                </div>
+                <div id="doneEditGesture">
+                    <p>Done</p>
+                </div>
+            </div>
             <div id="listDevices">
             </div>
             <div id="addDevice">
@@ -98,6 +115,33 @@
                     </div>
                 </div>
                 <div id="doneAddDevice">
+                    <p>Done</p>
+                </div>
+            </div>
+            <div id="editDevice">
+                <h3>Configure this Knocki device</h3>
+                <div>
+                    <div class="iconDev">
+                        <img src="img/high-level-prototype/icons/location.svg">
+                    </div>
+                    <div class="inp">
+                        <h4>Room</h4>
+                        <input type="text" class="room">
+                    </div>
+                </div>
+                <div>
+                    <div class="iconDev">
+                        <img src="img/high-level-prototype/icons/surface.svg">
+                    </div>
+                    <div class="inp">
+                        <h4>Surface</h4>
+                        <input type="text" class="surface">
+                    </div>
+                </div>
+                <div id="deleteEditDevice">
+                    <p>Delete</p>
+                </div>
+                <div id="doneEditDevice">
                     <p>Done</p>
                 </div>
             </div>
@@ -135,6 +179,7 @@
         <p id="btnAccount" data-screen="#myAccount">My account</p>
         <p id="btnLogOut" data-screen="#login">Log out</p>
     </nav>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

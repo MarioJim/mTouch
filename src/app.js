@@ -5,6 +5,8 @@ import localForage from 'localforage';
 import * as nav from './app/navigation';
 import * as toggle from './app/toggles';
 import * as add from './app/add';
+import * as edit from './app/edit';
+import { deleteAccount } from './app/localStorageFunctions';
 
 $(document).ready(() => {
   // To remove animations/transitions while loading
@@ -26,12 +28,20 @@ $(document).ready(() => {
   );
   // Add event listeners to nav buttons
   nav.setupNavBtns();
-  // Bind add buttons to their screens
+  // Bind add buttons to their functions
   add.setupAddBtns();
   add.setupDoneAddDevice();
   add.setupDoneAddGesture();
+  // Bind edit buttons to their functions
+  edit.setupEditBtns();
+  edit.setupDoneEditDevice();
+  edit.setupDoneEditGesture();
+  edit.setupDeleteEditDevice();
+  edit.setupDeleteEditGesture();
   // Bind toggles to devices at deviceList
   toggle.setupDevicesToggles();
+  // Bind delete account button
+  deleteAccount();
   // Local storage setup
   localForage.config({
     driver: localForage.LOCALSTORAGE,

@@ -11,15 +11,12 @@ const injectGestures = gestures => {
   for (const ges of gestures) {
     let pat = '';
     for (const i of ges.pattern)
-      pat += i
-        ? '                        <img src="img/high-level-prototype/icons/full.svg">\n'
-        : '                        <img src="img/high-level-prototype/icons/empty.svg">\n';
+      pat += `                        <img src="img/high-level-prototype/icons/${i ? 'full' : 'empty'}.svg">\n`;
     $('#listGestures').append(`
                 <div class="gesture">
                     <h5>${ges.name}</h5>
                     <div>
-                      ${pat}
-                    </div>
+                    ${pat}</div>
                 </div>
   `);
   }
@@ -56,6 +53,9 @@ const injectAccount = user => {
                 <p>${user.mail}</p>
                 <h4>Password</h4>
                 <p>${'*'.repeat(user.pass.length)}</p>
+                <div id="deleteAccount">
+                    <p>Delete Account</p>
+                </div>
   `);
 };
 

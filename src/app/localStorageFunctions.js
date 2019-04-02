@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import localForage from 'localforage';
 
 export const loginAs = async (user, callback) => {
@@ -31,6 +32,16 @@ export const saveRegisteredUser = async (user, callback) => {
     ],
   });
   loginAs(newUser, callback);
+};
+
+export const deleteAccount = () => {
+  $('#myAccount').on('click', '#deleteAccount', async () => {
+    const confirmed = confirm('Are you sure you want to delete this account?');
+    if (!confirmed) return;
+    await localForage.removeItem(window.currentUser);
+    $('#main').fadeOut();
+    $('#login').fadeIn();
+  });
 };
 
 export const getDevices = async () => {
