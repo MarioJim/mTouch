@@ -4,8 +4,7 @@ import { swipe, swipeStatus } from 'jquery-touchswipe';
 import localForage from 'localforage';
 import * as nav from './app/navigation';
 import * as toggle from './app/toggles';
-import * as add from './app/add';
-import * as edit from './app/edit';
+import * as add_edit from './app/add_edit';
 import { deleteAccount } from './app/localStorageFunctions';
 
 $(document).ready(() => {
@@ -28,16 +27,15 @@ $(document).ready(() => {
   );
   // Add event listeners to nav buttons
   nav.setupNavBtns();
-  // Bind add buttons to their functions
-  add.setupAddBtns();
-  add.setupDoneAddDevice();
-  add.setupDoneAddGesture();
-  // Bind edit buttons to their functions
-  edit.setupEditBtns();
-  edit.setupDoneEditDevice();
-  edit.setupDoneEditGesture();
-  edit.setupDeleteEditDevice();
-  edit.setupDeleteEditGesture();
+  // Bind add/edit buttons to their functions
+  add_edit.setupAddBtns();
+  add_edit.setupEditBtns();
+  add_edit.setupDoneGesture();
+  add_edit.setupDoneDevice();
+  add_edit.setupSelectAppDropdown();
+  add_edit.setupDeleteEditDevice();
+  add_edit.setupDeleteEditGesture();
+  add_edit.setupTappingArea();
   // Bind toggles to devices at deviceList
   toggle.setupDevicesToggles();
   // Bind delete account button

@@ -58,20 +58,6 @@ export const setupNavBtns = () => {
 
 export const setupSideMenuInteractions = () => {
   $('#sidebarButton').on('click', () => toggleSidemenu());
-  $('.swipe-area').swipe({
-    // eslint-disable-next-line consistent-return
-    swipeStatus(event, phase, direction) {
-      if (phase === 'move' && direction === 'right') {
-        toggleSidemenu('close');
-        return false;
-        // eslint-disable-next-line no-else-return
-      } else if (phase === 'move' && direction === 'left') {
-        toggleSidemenu('open');
-        return false;
-      }
-    },
-    allowPageScroll: 'vertical',
-  });
 };
 
 export const setupLoginBtn = () => {

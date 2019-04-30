@@ -26,9 +26,9 @@ export const saveRegisteredUser = async (user, callback) => {
       { room: 'Living room', surface: 'Under table', isOn: true },
     ],
     gestures: [
-      { name: 'Play music', pattern: [true] },
-      { name: 'Find my phone', pattern: [true, false, true] },
-      { name: 'Unlock smart door', pattern: [false, true, false, true] },
+      { name: 'Play music', app: 'sms', pattern: [true] },
+      { name: 'Find my phone', app: 'tplink', pattern: [true, false, true] },
+      { name: 'Unlock smart door', app: 'sonos', pattern: [false, true, false, true] },
     ],
   });
   loginAs(newUser, callback);
