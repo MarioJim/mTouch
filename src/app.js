@@ -3,7 +3,7 @@ import $ from 'jquery';
 import { swipe, swipeStatus } from 'jquery-touchswipe';
 import localForage from 'localforage';
 import * as nav from './app/navigation';
-import * as toggle from './app/toggles';
+import * as gen from './app/generate';
 import * as add_edit from './app/add_edit';
 import { deleteAccount } from './app/localStorageFunctions';
 
@@ -36,8 +36,8 @@ $(document).ready(() => {
   add_edit.setupDeleteEditBtns();
   add_edit.setupCancelAddBtns();
   add_edit.setupTappingArea();
-  // Bind toggles to devices at deviceList
-  toggle.setupDevicesToggles();
+  // Bind toggles to devices at listDevices
+  gen.setupDevicesToggles();
   // Bind delete account button
   deleteAccount();
   // Local storage setup

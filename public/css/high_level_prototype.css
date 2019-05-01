@@ -161,8 +161,8 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
 /* Add & Edit, Device & Gesture */
 #addDevice, #addGesture,
 #editDevice, #editGesture { 
-    padding-bottom: 160px !important;
-    min-height: calc(100vh - 240px) !important; 
+    padding-bottom: 180px !important;
+    min-height: calc(100vh - 260px) !important; 
 }
 
 #addDevice > h3,
@@ -173,10 +173,7 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
     margin: 0 0 12px 0;
 }
 
-#addDevice > div:nth-last-child(n+3),
-#addGesture > div:nth-last-child(n+3),
-#editDevice > div:nth-last-child(n+3),
-#editGesture > div:nth-last-child(n+3) {
+.iconAndText {
     margin: 10px 0;
     display: grid;
     grid-template-columns: 20vw auto;
@@ -198,9 +195,7 @@ div.iconDev > img {
     height: 60%;
 }
 
-div.inp > h4  {
-    margin: 12px 0 6px 0;
-}
+div.inp > h4  { margin: 12px 0 6px 0; }
 
 div.inp > input {
     border: 0;
@@ -231,17 +226,7 @@ div.inp > input {
     align-self: center;
 }
 
-.patternTitle,
-.enterPattern,
-.tappingAreaTitle,
-.tappingArea {
-    grid-column: 1 / 3;
-}
-
-.patternTitle,
-.tappingAreaTitle {
-    text-align: center;
-}
+.centeredText { text-align: center; }
 
 .enterPattern {
     height: 9vw;
@@ -267,6 +252,22 @@ div.inp > input {
     border: 3px solid grey;
     border-radius: 10px;
 }
+
+.gestureToggles {
+    margin: 10px;
+    min-height: 20vh;
+    border: 3px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.gestureToggles > div {
+    display: grid;
+    grid-template-columns: auto 14vw;
+    padding: 10px;
+}
+
+.gestureToggles > div > h4 { margin: auto 0; }
 
 #doneAddDevice, #doneAddGesture,
 #cancelAddDevice, #cancelAddGesture,

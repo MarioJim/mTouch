@@ -22,8 +22,8 @@ export const saveRegisteredUser = async (user, callback) => {
     mail: user.mail,
     pass: user.pass,
     devices: [
-      { room: 'Bedroom', surface: 'Wall', isOn: false },
-      { room: 'Living room', surface: 'Under table', isOn: true },
+      { room: 'Bedroom', surface: 'Wall', isOn: false, gestureToggles: [true, true, false] },
+      { room: 'Living room', surface: 'Under table', isOn: true, gestureToggles: [false, true, true] },
     ],
     gestures: [
       { name: 'Play music', app: 'sms', pattern: [true] },
