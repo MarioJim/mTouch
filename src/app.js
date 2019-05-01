@@ -16,17 +16,9 @@ $(document).ready(() => {
   nav.setupLoginBtn();
   // Validate input for register
   nav.setupRegisterBtn();
-  // Check scroll
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (window.scrollY <= 0) $('#main > header').removeClass('scrolled');
-      else $('#main > header').addClass('scrolled');
-    },
-    { passive: true }
-  );
-  // Add event listeners to nav buttons
+  // Add event listeners to buttons
   nav.setupNavBtns();
+  nav.setupKnockiBtn();
   // Bind add/edit buttons to their functions
   add_edit.setupAddBtns();
   add_edit.setupEditBtns();

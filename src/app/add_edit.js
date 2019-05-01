@@ -276,7 +276,7 @@ export const setupTappingArea = () => {
   const addRegion = new zt.Region(addTappingArea);
   addRegion.bind(addTappingArea, tapOrPress, event => {
     if ($('#addGesture div.pattern').children().length >= 7) return;
-    if (event.detail.interval < 200)
+    if (event.detail.interval < 150)
       $('#addGesture div.pattern').append('<img src="img/high-level-prototype/icons/full.svg">');
     else $('#addGesture div.pattern').append('<img src="img/high-level-prototype/icons/empty.svg">');
   });
@@ -289,7 +289,7 @@ export const setupTappingArea = () => {
   const editRegion = new zt.Region(editTappingArea);
   editRegion.bind(editTappingArea, tapOrPress, event => {
     if ($('#editGesture div.pattern').children().length >= 7) return;
-    if (event.detail.interval < 200)
+    if (event.detail.interval < 150)
       $('#editGesture div.pattern').append('<img src="img/high-level-prototype/icons/full.svg">');
     else $('#editGesture div.pattern').append('<img src="img/high-level-prototype/icons/empty.svg">');
   });

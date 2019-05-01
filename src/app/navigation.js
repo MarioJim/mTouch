@@ -3,7 +3,15 @@ import generateMain from './generate';
 import { validateLogin, validateRegister } from './validateInputs';
 import * as ls from './localStorageFunctions';
 
-export const ifEmptyInputs = button => {
+const clearInputs = () => {
+  $('#logform .user').val('');
+  $('#logform .password').val('');
+  $('#regform .user').val('');
+  $('#regform .mail').val('');
+  $('#regform .password').val('');
+};
+
+const ifEmptyInputs = button => {
   switch (button) {
     case 'login':
       $('#regbtn').slideToggle();
@@ -47,12 +55,25 @@ export const setupNavBtns = () => {
   $('nav > p').on('click', event => {
     toggleSidemenu('close');
     if ($(event.currentTarget).attr('data-screen') === '#login') {
+      clearInputs();
+      $('#regbtn').show();
+      $('#logbtn').show();
+      $('#logform > form').hide();
+      $('#regform > form').hide();
+      $('#login > img').removeClass('onLogin');
       $('#main').hide();
       $('#login').fadeIn();
     } else if ($(event.currentTarget).attr('data-screen') !== '') {
       $('#content > div').hide();
       $($(event.currentTarget).attr('data-screen')).fadeIn();
     }
+  });
+};
+
+export const setupKnockiBtn = () => {
+  $('header > img').on('click', () => {
+    $('#content > div').hide();
+    $('#listGestures').fadeIn();
   });
 };
 
