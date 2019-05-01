@@ -49,7 +49,7 @@ const clearScreen = (dev_ges, add_edit) => {
   else if (dev_ges === 'device' && add_edit === 'add') {
     $('#addDevice .room').val('');
     $('#addDevice .surface').val('');
-    $('#editDevice .gestureToggles').empty();
+    $('#addDevice .gestureToggles').empty();
   } else if (dev_ges === 'device' && add_edit === 'edit') $('#editDevice .gestureToggles').empty();
 };
 
