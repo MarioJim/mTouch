@@ -33,8 +33,8 @@ $(document).ready(() => {
   add_edit.setupDoneGesture();
   add_edit.setupDoneDevice();
   add_edit.setupSelectAppDropdown();
-  add_edit.setupDeleteEditDevice();
-  add_edit.setupDeleteEditGesture();
+  add_edit.setupDeleteEditBtns();
+  add_edit.setupCancelAddBtns();
   add_edit.setupTappingArea();
   // Bind toggles to devices at deviceList
   toggle.setupDevicesToggles();

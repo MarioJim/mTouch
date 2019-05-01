@@ -3,8 +3,16 @@ import * as zt from 'zingtouch';
 import * as ls from './localStorageFunctions';
 import generateMain from './generate';
 
+const updateSelectAppImg = () => {
+  const addVal = $('#addGesture .selectApp').val();
+  $('#addGesture .appImg').css('background', `url('./img/high-level-prototype/app_icons/${addVal}.png') center`);
+  $('#addGesture .appImg').css('background-size', 'contain');
+  const editVal = $('#editGesture .selectApp').val();
+  $('#editGesture .appImg').css('background', `url('./img/high-level-prototype/app_icons/${editVal}.png') center`);
+  $('#editGesture .appImg').css('background-size', 'contain');
+};
+
 const parsePattern = pattern => {
-  console.log(pattern);
   const result = [];
   for (const i of pattern)
     if (
@@ -36,11 +44,7 @@ export const setupEditBtns = () => {
     const editingGesture = gestures[index];
     $('#editGesture .name').val(editingGesture.name);
     $('#editGesture .selectApp').val(editingGesture.app);
-    $('#editGesture .appImg').css(
-      'background',
-      `url('./img/high-level-prototype/app_icons/${editingGesture.app}.png') center`
-    );
-    $('#editGesture .appImg').css('background-size', 'contain');
+    updateSelectAppImg();
     $('#editGesture .pattern').empty();
     for (const i of editingGesture.pattern)
       $('#editGesture .pattern').append(`<img src="img/high-level-prototype/icons/${i ? 'full' : 'empty'}.svg">`);
@@ -78,6 +82,8 @@ export const setupDoneGesture = () => {
       $('#listGestures').fadeIn();
       $('#addGesture .name').val('');
       $('#addGesture .selectApp').val('facebook');
+      updateSelectAppImg();
+      $('#addGesture .pattern').empty();
     }
   });
   $('#doneEditGesture').on('click', async () => {
@@ -136,19 +142,11 @@ export const setupDoneDevice = () => {
 };
 
 export const setupSelectAppDropdown = () => {
-  $('#addGesture .selectApp').on('change', async () => {
-    const newValue = $('#addGesture .selectApp').val();
-    $('#addGesture .appImg').css('background', `url('./img/high-level-prototype/app_icons/${newValue}.png') center`);
-    $('#addGesture .appImg').css('background-size', 'contain');
-  });
-  $('#editGesture .selectApp').on('change', async () => {
-    const newValue = $('#editGesture .selectApp').val();
-    $('#editGesture .appImg').css('background', `url('./img/high-level-prototype/app_icons/${newValue}.png') center`);
-    $('#editGesture .appImg').css('background-size', 'contain');
-  });
+  $('#addGesture .selectApp').on('change', updateSelectAppImg);
+  $('#editGesture .selectApp').on('change', updateSelectAppImg);
 };
 
-export const setupDeleteEditGesture = () => {
+export const setupDeleteEditBtns = () => {
   $('#deleteEditGesture').on('click', async () => {
     const gestures = await ls.getGestures();
     const { name } = gestures[window.editingGestureIndex];
@@ -161,9 +159,6 @@ export const setupDeleteEditGesture = () => {
     $('#editGesture').fadeOut();
     $('#listGestures').fadeIn();
   });
-};
-
-export const setupDeleteEditDevice = () => {
   $('#deleteEditDevice').on('click', async () => {
     const devices = await ls.getDevices();
     const { room } = devices[window.editingDeviceIndex];
@@ -175,6 +170,27 @@ export const setupDeleteEditDevice = () => {
     await generateMain();
     $('#editDevice').fadeOut();
     $('#listDevices').fadeIn();
+  });
+};
+
+export const setupCancelAddBtns = () => {
+  $('#cancelAddGesture').on('click', async () => {
+    const confirmed = confirm(`Are you sure you want to cancel adding this gesture?`);
+    if (!confirmed) return;
+    $('#addGesture').fadeOut();
+    $('#listGestures').fadeIn();
+    $('#addGesture .name').val('');
+    $('#addGesture .selectApp').val('facebook');
+    updateSelectAppImg();
+    $('#addGesture .pattern').empty();
+  });
+  $('#cancelAddDevice').on('click', async () => {
+    const confirmed = confirm(`Are you sure you want to cancel adding this device?`);
+    if (!confirmed) return;
+    $('#addDevice').fadeOut();
+    $('#listDevices').fadeIn();
+    $('#addDevice .room').val('');
+    $('#addDevice .surface').val('');
   });
 };
 
