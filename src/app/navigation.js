@@ -30,30 +30,15 @@ const ifEmptyInputs = button => {
 export const moveToMain = async () => {
   await generateMain();
   $('#login').fadeOut();
+  $('nav path').css('fill', '#CCC');
+  $('#start path').css('fill', '#00bfa5');
+  $('#content > div').hide();
+  $('#listDevices').fadeIn();
   $('#main').fadeIn();
 };
 
-const toggleSidemenu = (action = 'toggle') => {
-  switch (action) {
-    case 'toggle':
-      $('#sidebarButton').toggleClass('active');
-      $('nav').toggleClass('active');
-      break;
-    case 'open':
-      $('#sidebarButton').addClass('active');
-      $('nav').addClass('active');
-      break;
-    case 'close':
-      $('#sidebarButton').removeClass('active');
-      $('nav').removeClass('active');
-      break;
-    default:
-  }
-};
-
 export const setupNavBtns = () => {
-  $('nav > p').on('click', event => {
-    toggleSidemenu('close');
+  $('nav > svg').on('click', event => {
     if ($(event.currentTarget).attr('data-screen') === '#login') {
       clearInputs();
       $('#regbtn').show();
@@ -64,6 +49,10 @@ export const setupNavBtns = () => {
       $('#main').hide();
       $('#login').fadeIn();
     } else if ($(event.currentTarget).attr('data-screen') !== '') {
+      $('nav path').css('fill', '#CCC');
+      $(event.currentTarget)
+        .children('path')
+        .css('fill', '#00bfa5');
       $('#content > div').hide();
       $($(event.currentTarget).attr('data-screen')).fadeIn();
     }
@@ -75,10 +64,6 @@ export const setupKnockiBtn = () => {
     $('#content > div').hide();
     $('#listGestures').fadeIn();
   });
-};
-
-export const setupSideMenuInteractions = () => {
-  $('#sidebarButton').on('click', () => toggleSidemenu());
 };
 
 export const setupLoginBtn = () => {

@@ -1,4 +1,4 @@
-body { margin: 0; }
+body { margin: 0;  overflow-x: hidden; }
 body.preload * { transition: none; }
 section:not(#login) { display: none; }
 
@@ -78,8 +78,8 @@ header > img { margin: 14px; height: 28px; }
 #sidebarButton > span { background-color: whitesmoke; }
 #content { margin-top: 60px; }
 #content > div { 
-    padding: 20px 20px 80px 20px; 
-    min-height: calc(100vh - 160px); 
+    padding: 20px 20px calc(100px + 6vh) 20px;
+    min-height: calc(94vh - 180px);
 }
 #content > div:not(#listGestures) { display: none; }
 
@@ -161,8 +161,8 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
 /* Add & Edit, Device & Gesture */
 #addDevice, #addGesture,
 #editDevice, #editGesture { 
-    padding-bottom: 180px !important;
-    min-height: calc(100vh - 260px) !important; 
+    padding-bottom: calc(180px + 6vh) !important;
+    min-height: calc(94vh - 260px) !important; 
 }
 
 #addDevice > h3,
@@ -284,18 +284,18 @@ div.inp > input {
 #doneAddDevice, #doneAddGesture,
 #doneEditDevice, #doneEditGesture {
     background: teal;
-    bottom: 40px;
+    bottom: calc(110px + 6vh);
 }
 
 #cancelAddDevice, #cancelAddGesture {
     background-color: white;
-    bottom: 110px;
+    bottom: calc(40px + 6vh);
     border: 4px solid #ED5E68;
 }
 
 #deleteEditDevice, #deleteEditGesture {
     background: #ED5E68;
-    bottom: 110px;
+    bottom: calc(110px + 6vh);
 }
 
 #doneAddDevice > p, #doneAddGesture > p,
@@ -306,7 +306,7 @@ div.inp > input {
 #addGestureBtn, 
 #addDeviceBtn {
     position: fixed;
-    bottom: 20px;
+    bottom: calc(40px + 6vh);
     right: 20px;
     border-radius: 50%;
     width: 56px;
@@ -341,7 +341,7 @@ div.inp > input {
     box-sizing: border-box;
     position: absolute;
     background: #ED5E68;
-    bottom: 40px;
+    bottom: calc(6vh + 40px);
 }
 
 #deleteAccount > p { color: white; }
@@ -360,23 +360,23 @@ div.inp > input {
 /* Nav */
 nav {
     position: fixed;
-    top: 60px;
-    right: -50%;
+    height: 6vh;
+    right: 0;
+    left: 0;
     bottom: 0;
-    width: 45%;
-    transition-duration: 500ms;
     z-index: 1000;
-    background: #DDD;
-    padding: 6px 0;
+    background: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid grey;
 }
 
-nav.active { right: 0; }
-nav > p {
-    line-height: 46px;
-    margin: 10px 12px;
-    border-radius: 10px;
-    background: #BBB;
-} 
+nav > svg { width: 5vh; }
+
+nav path { fill: #CCC; }
+
+nav > svg.active > path { fill: #00bfa5; }
 
 section {
     border-bottom: 0;

@@ -10,8 +10,6 @@ import { deleteAccount } from './app/localStorageFunctions';
 $(document).ready(() => {
   // To remove animations/transitions while loading
   $('body').removeClass('preload');
-  // To open and close the sidebar
-  nav.setupSideMenuInteractions();
   // Validate input for login
   nav.setupLoginBtn();
   // Validate input for register
