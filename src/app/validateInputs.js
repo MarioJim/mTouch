@@ -20,6 +20,10 @@ const checkMail = mail => {
 
 const checkPass = pass => {
   const regexPass = /.{4,}/;
+  if (pass.length === 0) {
+    alert('Please fill out your password');
+    return false;
+  }
   if (!regexPass.test(pass)) {
     alert('Password is too short');
     return false;

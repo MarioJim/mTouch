@@ -6,7 +6,7 @@ module.exports = {
     filename: 'app.js',
     path: path.resolve(__dirname, 'public/js'),
   },
-  // mode: 'production',
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: 'production',
+  // mode: 'development',
+  // devtool: 'inline-source-map',
 };

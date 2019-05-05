@@ -75,14 +75,17 @@ header {
 
 header > svg { margin: auto 10px; height: 32px; position: fixed; }
 header path { fill: white; }
-header > h4 { margin: 0 auto; font-size: 28px; color: white; font-family: 'Roboto'; font-weight: 400; }
+header > h4 {
+    margin: 0 auto;
+    font-size: 28px;
+    color: white; 
+    font-family: 'Roboto';
+    font-weight: 400;
+}
 #sidebarButton { float: right; }
 #sidebarButton > span { background-color: whitesmoke; }
 #content { margin-top: 60px; }
-#content > div { 
-    padding: 20px 20px calc(100px + 6vh) 20px;
-    min-height: calc(94vh - 180px);
-}
+#content > div { padding: 20px 20px calc(100px + 6vh) 20px; }
 #content > div:not(#listGestures) { display: none; }
 
 /* List gestures */
@@ -104,7 +107,7 @@ div.device {
     padding: 14px;
     border-radius: 10px;
     display: inline-grid;
-    grid-column-gap: 20px;
+    grid-column-gap: 16px;
     grid-template-columns: 20vw auto 14vw;
 }
 
@@ -162,9 +165,10 @@ input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
 
 /* Add & Edit, Device & Gesture */
 #addDevice, #addGesture,
-#editDevice, #editGesture { 
+#editDevice, #editGesture,
+#myAccount { 
     padding-bottom: calc(180px + 6vh) !important;
-    min-height: calc(94vh - 260px) !important; 
+    min-height: calc(94vh - 260px); 
 }
 
 #addDevice > h3,
