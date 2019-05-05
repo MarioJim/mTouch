@@ -36,6 +36,7 @@ const parseToggles = toggles => {
     )
       result.push(true);
     else result.push(false);
+  console.log(result);
   return result;
 };
 
@@ -70,11 +71,13 @@ const patternIsDuplicate = async pattern => {
 
 export const setupAddBtns = () => {
   $('#listGestures').on('click', '#addGestureBtn', () => {
+    clearScreen('gesture', 'add');
     $('#content > div').hide();
     $('#addGesture').fadeIn();
   });
   $('#listDevices').on('click', '#addDeviceBtn', async () => {
     const gestures = await ls.getGestures();
+    clearScreen('device', 'add');
     for (const g of gestures)
       $('#addDevice .gestureToggles').append(`
       <div>
@@ -91,6 +94,7 @@ export const setupAddBtns = () => {
 
 export const setupEditBtns = () => {
   $('#listGestures').on('click', '.gesture', async event => {
+    clearScreen('gesture', 'edit');
     const index = $(event.currentTarget).index();
     window.editingGestureIndex = index;
     const gestures = await ls.getGestures();
@@ -104,6 +108,7 @@ export const setupEditBtns = () => {
     $('#editGesture').fadeIn();
   });
   $('#listDevices').on('click', '.device > div', async event => {
+    clearScreen('device', 'edit');
     const index = $(event.currentTarget)
       .parent()
       .index();
@@ -147,7 +152,6 @@ export const setupDoneGesture = () => {
       await generateMain();
       $('#addGesture').fadeOut();
       $('#listGestures').fadeIn();
-      clearScreen('gesture', 'add');
     }
   });
   $('#doneEditGesture').on('click', async () => {
@@ -168,7 +172,6 @@ export const setupDoneGesture = () => {
       await generateMain();
       $('#editGesture').fadeOut();
       $('#listGestures').fadeIn();
-      clearScreen('gesture', 'edit');
     }
   });
 };
@@ -177,7 +180,7 @@ export const setupDoneDevice = () => {
   $('#doneAddDevice').on('click', async () => {
     const room = $('#addDevice .room').val();
     const surface = $('#addDevice .surface').val();
-    const toggles = $('#editDevice .gestureToggles').children();
+    const toggles = $('#addDevice .gestureToggles').children();
     if (room.length === 0) alert('Enter a Room name');
     else if (surface.length === 0) alert('Enter a Surface name');
     else {
@@ -188,7 +191,6 @@ export const setupDoneDevice = () => {
       await generateMain();
       $('#addDevice').fadeOut();
       $('#listDevices').fadeIn();
-      clearScreen('device', 'add');
     }
   });
   $('#doneEditDevice').on('click', async () => {
@@ -207,7 +209,6 @@ export const setupDoneDevice = () => {
       await generateMain();
       $('#editDevice').fadeOut();
       $('#listDevices').fadeIn();
-      clearScreen('device', 'edit');
     }
   });
 };
@@ -232,7 +233,6 @@ export const setupDeleteEditBtns = () => {
     await generateMain();
     $('#editGesture').fadeOut();
     $('#listGestures').fadeIn();
-    clearScreen('gesture', 'edit');
   });
   $('#deleteEditDevice').on('click', async () => {
     const devices = await ls.getDevices();
@@ -245,7 +245,6 @@ export const setupDeleteEditBtns = () => {
     await generateMain();
     $('#editDevice').fadeOut();
     $('#listDevices').fadeIn();
-    clearScreen('device', 'edit');
   });
 };
 
@@ -255,14 +254,12 @@ export const setupCancelAddBtns = () => {
     if (!confirmed) return;
     $('#addGesture').fadeOut();
     $('#listGestures').fadeIn();
-    clearScreen('gesture', 'add');
   });
   $('#cancelAddDevice').on('click', async () => {
     const confirmed = confirm(`Are you sure you want to cancel adding this device?`);
     if (!confirmed) return;
     $('#addDevice').fadeOut();
     $('#listDevices').fadeIn();
-    clearScreen('device', 'add');
   });
 };
 

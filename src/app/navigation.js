@@ -3,14 +3,6 @@ import generateMain from './generate';
 import { validateLogin, validateRegister } from './validateInputs';
 import * as ls from './localStorageFunctions';
 
-const clearInputs = () => {
-  $('#logform .user').val('');
-  $('#logform .password').val('');
-  $('#regform .user').val('');
-  $('#regform .mail').val('');
-  $('#regform .password').val('');
-};
-
 const ifEmptyInputs = button => {
   switch (button) {
     case 'login':
@@ -39,23 +31,19 @@ export const moveToMain = async () => {
 
 export const setupNavBtns = () => {
   $('nav > svg').on('click', event => {
-    if ($(event.currentTarget).attr('data-screen') === '#login') {
-      clearInputs();
-      $('#regbtn').show();
-      $('#logbtn').show();
-      $('#logform > form').hide();
-      $('#regform > form').hide();
-      $('#login > img').removeClass('onLogin');
-      $('#main').hide();
-      $('#login').fadeIn();
-    } else if ($(event.currentTarget).attr('data-screen') !== '') {
-      $('nav path').css('fill', '#CCC');
-      $(event.currentTarget)
-        .children('path')
-        .css('fill', '#00bfa5');
-      $('#content > div').hide();
-      $($(event.currentTarget).attr('data-screen')).fadeIn();
-    }
+    $('nav path').css('fill', '#CCC');
+    $(event.currentTarget)
+      .children('path')
+      .css('fill', '#00bfa5');
+    $('header > h4').text($(event.currentTarget).attr('data-title'));
+    $('#content > div').hide();
+    $($(event.currentTarget).attr('data-screen')).fadeIn();
+  });
+  $('header > svg').on('click', () => {
+    $('nav path').css('fill', '#CCC');
+    $('header > h4').text('Account');
+    $('#content > div').hide();
+    $('#myAccount').fadeIn();
   });
 };
 

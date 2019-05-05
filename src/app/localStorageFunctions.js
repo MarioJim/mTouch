@@ -34,11 +34,27 @@ export const saveRegisteredUser = async (user, callback) => {
   loginAs(newUser, callback);
 };
 
-export const deleteAccount = () => {
+const clearInputs = () => {
+  $('#logform .user').val('');
+  $('#logform .password').val('');
+  $('#regform .user').val('');
+  $('#regform .mail').val('');
+  $('#regform .password').val('');
+};
+
+export const setupAccountBtns = () => {
+  $('#myAccount').on('click', '#logOut', async () => {
+    const confirmed = confirm('Are you sure you want to log out?');
+    if (!confirmed) return;
+    clearInputs();
+    $('#main').fadeOut();
+    $('#login').fadeIn();
+  });
   $('#myAccount').on('click', '#deleteAccount', async () => {
     const confirmed = confirm('Are you sure you want to delete this account?');
     if (!confirmed) return;
     await localForage.removeItem(window.currentUser);
+    clearInputs();
     $('#main').fadeOut();
     $('#login').fadeIn();
   });

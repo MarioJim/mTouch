@@ -52,6 +52,9 @@ const injectAccount = user => {
     <p>${user.mail}</p>
     <h4>Password</h4>
     <p>${'*'.repeat(user.pass.length)}</p>
+    <div id="logOut">
+      <p>Log Out</p>
+    </div>
     <div id="deleteAccount">
       <p>Delete Account</p>
     </div>

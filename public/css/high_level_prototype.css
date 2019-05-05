@@ -68,12 +68,14 @@ header {
     background: #00bfa5;
     width: 94vw;
     height: 60px;
+    justify-content: start;
     transition: box-shadow .2s linear,-webkit-box-shadow .2s linear;
-    display: flex;
     box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 
-header > img { margin: 14px; height: 28px; }
+header > svg { margin: auto 10px; height: 32px; position: fixed; }
+header path { fill: white; }
+header > h4 { margin: 0 auto; font-size: 28px; color: white; font-family: 'Roboto'; font-weight: 400; }
 #sidebarButton { float: right; }
 #sidebarButton > span { background-color: whitesmoke; }
 #content { margin-top: 60px; }
@@ -295,7 +297,7 @@ div.inp > input {
 
 #deleteEditDevice, #deleteEditGesture {
     background: #ED5E68;
-    bottom: calc(110px + 6vh);
+    bottom: calc(40px + 6vh);
 }
 
 #doneAddDevice > p, #doneAddGesture > p,
@@ -342,6 +344,18 @@ div.inp > input {
     position: absolute;
     background: #ED5E68;
     bottom: calc(6vh + 40px);
+}
+
+#logOut {
+    margin: 0 12vw;
+    padding: 16px;
+    border-radius: 30px;
+    width: calc(76vw - 40px);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: calc(6vh + 110px);
+    background-color: white;
+    border: 4px solid #ED5E68;
 }
 
 #deleteAccount > p { color: white; }

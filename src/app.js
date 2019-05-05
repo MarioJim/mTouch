@@ -5,7 +5,7 @@ import localForage from 'localforage';
 import * as nav from './app/navigation';
 import * as gen from './app/generate';
 import * as add_edit from './app/add_edit';
-import { deleteAccount } from './app/localStorageFunctions';
+import { setupAccountBtns } from './app/localStorageFunctions';
 
 $(document).ready(() => {
   // To remove animations/transitions while loading
@@ -29,7 +29,7 @@ $(document).ready(() => {
   // Bind toggles to devices at listDevices
   gen.setupDevicesToggles();
   // Bind delete account button
-  deleteAccount();
+  setupAccountBtns();
   // Local storage setup
   localForage.config({
     driver: localForage.LOCALSTORAGE,
