@@ -127,3 +127,21 @@
     width: 160px;
     border-radius: 50%;
 }
+
+#analytics > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+#analytics > div {
+    display: flex;
+    justify-content: center;
+}
+
+#analytics > div > img {
+    margin: 6px;
+    max-height: 38vw;
+    height: 40vh;
+}
