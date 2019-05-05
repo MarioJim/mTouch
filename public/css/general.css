@@ -41,7 +41,6 @@ h1 {
 
 #menu {
     display: flex;
-    justify-content: space-evenly;
     background: #fff;
 }
 
@@ -50,7 +49,7 @@ header a, #side-menu > a {
     text-decoration: none;
     color: #43474F;
     padding: 6px 10px;
-    margin-left: 12px;
+    margin-left: 6px;
     border-radius: 8px;
     transition-duration: 0.4s;
     transition-property: color, background-color;
@@ -63,11 +62,6 @@ header a, #side-menu > a {
 
 #sidebarButton {
     display: none;
-}
-
-@media (max-width: 1050px) {
-    #menu { display: none; }
-    #sidebarButton { display: inline-block; }
 }
 
 #sidebarButton > span {
@@ -130,10 +124,10 @@ header a, #side-menu > a {
     text-align: right;
 }
 
-@media (min-width: 980px) {
-    #side-menu { display: none; }
+@media (max-width: 1150px) {
+    #menu { display: none; }
+    #sidebarButton { display: inline-block; }
 }
-
 /* Styles for other pages */
 
 h2, h3, h4, h5, h6 {

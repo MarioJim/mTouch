@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Knocki, by mTouch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136702959-1"></script>
+    <script src="js/pageAnalytics.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/evaluation.css" rel="stylesheet">
+    <script>
+        const toggleNav = () => {
+            document.getElementById('sidebarButton').classList.toggle('active');
+            document.getElementById('side-menu').classList.toggle('active');
+        }
+        const checkNav = () => {
+            if (window.innerWidth > 980) {
+                document.getElementById('sidebarButton').classList.remove('active');
+                document.getElementById('side-menu').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+
+<body onresize="checkNav()">
+    <header>
+        <a href="./index.html">
+            <div id="logo">
+                <h1>mT</h1>
+                <img src="img/logoO.png" id="logoO" alt="O">
+                <h1>uch</h1>
+            </div>
+        </a>
+        <div id="menu">
+            <a href="./personas.html">Personas</a>
+            <a href="./benchmarking.html">Benchmarking</a>
+            <a href="./low_level_prototype.html">Low level prototype</a>
+            <a href="./think_aloud_tests.html">Think aloud tests</a>
+            <a href="./evaluation.html">Evaluation</a>
+            <a href="./high_level_prototype.html">High level protoype</a>
+        </div>
+        <div id="sidebarButton" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="side-menu">
+        <a href="./personas.html">Personas</a>
+        <a href="./benchmarking.html">Benchmarking</a>
+        <a href="./low_level_prototype.html">Low level prototype</a>
+        <a href="./think_aloud_tests.html">Think aloud tests</a>
+        <a href="./evaluation.html">Evaluation</a>
+        <a href="./high_level_prototype.html">High level protoype</a>
+    </nav>
+
+    <h2>Evaluation</h2>
+    <h3>Heuristic Evaluation: Nielsen</h3>
+    <section id="heuristic">
+        <div>
+            <p>
+                <strong>Visibility of system status:</strong> There is adequate feedback to let the user know on which
+                screen they are on both by changing the color of the logo on the nav bar and by showing the name of the
+                screen at the top of each page.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot3.jpg">
+                <img src="img/evaluation/screenshot4.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Match between system and the real world:</strong> Adequate, all terminology is closely related
+                to the Knocki device itself and is understandable by the user. We are considering changing from gestures
+                to knocks in order for users to better understand how the device works. We are also considering changing
+                the empty dots to dashes to help with the same goal, however we would like to have more tests before
+                doing so, as right now results are inconclusive.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot2.jpg">
+                <img src="img/evaluation/screenshot3.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>User control and freedom:</strong> Adequate control with a nav bar always present that allows
+                the user an easy exit from any screen, as well as the ability to delete unwanted touch on gesture
+                creation.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot6.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Consistency and standards:</strong> Consistent interface, if a word is used to describe
+                something, every time that thing is described, the same word is used (such as gestures or devices). We
+                also applied standards for logos such as settings and the information that should be displayed on such
+                screens.
+            </p>
+        </div>
+        <div>
+            <p>
+                <strong>Error prevention:</strong> A confirmation dialog appears every time a user wants to delete
+                either a gesture or a knocki device as well as cancelling the addition of such things.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot9.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Recognition rather than recall:</strong> Options when adding devices or gestures are always
+                visible and we only use one screen in order to avoid high memory loads.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot8.jpg">
+                <img src="img/evaluation/screenshot7.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Flexibility and efficiency of use:</strong> The addition of toggles to add existing gestures
+                directly to new Knocki devices allow more experienced users with many devices to quickly set up all
+                their functions, while still providing a great level of customization by selecting which action each
+                device is able to perform, and still allowing users to create their own gestures.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot5.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Aesthetic and minimalist design:</strong> We tried our best to design the app properly, without
+                any unnecessary information for the functionality required. Only whatever the user needs to accomplish
+                is shown.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot2.jpg">
+                <img src="img/evaluation/screenshot10.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Help users recognize, diagnose, and recover from errors:</strong> All error messages in the app
+                are in plain language, really they are only for empty fields, so no error codes are used whatsoever.
+            </p>
+            <div class="images">
+                <img src="img/evaluation/screenshot1.jpg">
+                <img src="img/evaluation/screenshot11.jpg">
+            </div>
+        </div>
+        <div>
+            <p>
+                <strong>Help and documentation:</strong> There is not a manual or documentation for the user to learn
+                how to use the app directly on there, however this would ideally be on the AppStore or Play Store before
+                the user downloads the app, or in any case on Knocki’s website. We don’t see why documentation should be
+                inside the app.
+            </p>
+        </div>
+
+
+    </section>
+    <h3>Model Extraction</h3>
+    <section id="model">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zRsnyxx43mc" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+</body>
+
+</html>

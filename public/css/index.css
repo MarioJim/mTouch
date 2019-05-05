@@ -51,6 +51,19 @@
     }
 }
 
+#ad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+@media (max-width: 800px) {
+    #ad { flex-wrap: wrap; }
+}
+
+#ad > h2 { margin: 20px 60px; }
+
 #uses {
     display: flex;
     flex-wrap: wrap;
