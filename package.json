@@ -19,7 +19,7 @@
   "homepage": "https://github.com/MarioJim/mTouch#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "jquery-touchswipe": "^1.6.19",
     "localforage": "^1.7.3",
     "zingtouch": "^1.0.6"
