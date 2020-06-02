@@ -1,0 +1,148 @@
+body {
+    background: #fff;
+    margin: 0;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 3%;
+    background: #fff;
+}
+
+header, section{
+    border-bottom: 1px solid #DCDEDD;
+}
+
+#logo {
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 240%;
+    color: #43474F;
+}
+
+#logo > img {
+    margin-top: 4px;
+    height: 45%;
+}
+
+#menu {
+    display: flex;
+    background: #fff;
+}
+
+header a, #side-menu > a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #43474F;
+    padding: 6px 10px;
+    margin-left: 6px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    transition-property: color, background-color;
+}
+
+#menu > a:hover, #side-menu > a:hover {
+    background: #43474FD0;
+    color: #DCDEDD;
+}
+
+#sidebarButton {
+    display: none;
+}
+
+#sidebarButton > span {
+    position: relative;
+    background-color: #858585;
+    border-radius: 3px;
+    display: block;
+    height: 3px;
+    margin: 5px 10px 0 10px;
+    transition-duration: 300ms;
+    width: 30px;
+    cursor: pointer;
+}
+
+#sidebarButton.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    top: 8px;
+}
+
+#sidebarButton.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#sidebarButton.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg); 
+    top: -8px;
+}
+
+#side-menu {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    z-index: 1000;
+    width: 100%;
+    transition-duration: 500ms;
+    margin: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#side-menu.active {
+    right: 0;
+}
+
+#side-menu ~ * {
+    transition: filter 400ms cubic-bezier(.4, 0, .2, 1);
+}
+
+#side-menu.active ~ * {
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+#side-menu > a {
+    font-size: 18px;
+    margin: 10px 0; 
+    padding: 14px;
+    background: #e8e8e8;
+    text-align: right;
+}
+
+@media (max-width: 1150px) {
+    #menu { display: none; }
+    #sidebarButton { display: inline-block; }
+}
+/* Styles for other pages */
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin: 25px 0 0 0;
+    text-align: center;
+    font-size: 36px;
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}

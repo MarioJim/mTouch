@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Knocki, by mTouch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low level prototype</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136702959-1"></script>
+    <script src="js/pageAnalytics.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/low_level_prototype.css" rel="stylesheet">
+    <script>
+        const toggleNav = () => {
+            document.getElementById('sidebarButton').classList.toggle('active');
+            document.getElementById('side-menu').classList.toggle('active');
+        }
+        const checkNav = () => {
+            if (window.innerWidth > 980) {
+                document.getElementById('sidebarButton').classList.remove('active');
+                document.getElementById('side-menu').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+
+<body onresize="checkNav()">
+    <header>
+        <a href="./index.html">
+            <div id="logo">
+                <h1>mT</h1>
+                <img src="img/logoO.png" id="logoO" alt="O">
+                <h1>uch</h1>
+            </div>
+        </a>
+        <div id="menu">
+            <a href="./personas.html">Personas</a>
+            <a href="./benchmarking.html">Benchmarking</a>
+            <a href="./low_level_prototype.html">Low level prototype</a>
+            <a href="./think_aloud_tests.html">Think aloud tests</a>
+            <a href="./evaluation.html">Evaluation</a>
+            <a href="./high_level_prototype.html">High level protoype</a>
+        </div>
+        <div id="sidebarButton" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="side-menu">
+        <a href="./personas.html">Personas</a>
+        <a href="./benchmarking.html">Benchmarking</a>
+        <a href="./low_level_prototype.html">Low level prototype</a>
+        <a href="./think_aloud_tests.html">Think aloud tests</a>
+        <a href="./evaluation.html">Evaluation</a>
+        <a href="./high_level_prototype.html">High level protoype</a>
+    </nav>
+
+    <section id="marvel">
+        <iframe frameborder="0" src="https://marvelapp.com/b35gi9b?emb=1" title="MarvelApp interactive frame"></iframe>
+        <div>
+            <h2>Marvel prototype</h2>
+        </div>
+    </section>
+    <h2>Low level prototype assets</h2>
+    <section id="prototype">
+        <div>
+            <img src="img/low-level-prototype/home.jpg" alt="Home screen of the app">
+            <p>
+                At the home screen the user is able to check the gestures assigned to the existing
+                devices, look at his/her profile, add a new gesture or access the side-bar menu.
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/user-profile.jpg" alt="Login with Facebook">
+            <p>
+                The user can log-in if he/she wishes in order to store the global settings of
+                the application and access them from different devices.
+
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/side-bar.jpg" alt="Sidebar">
+            <p>
+                A side-bar menu displays, here the user is able to add a new knocki device,
+                look at his/her account info, edit existing devices, edit gestures or provide feedback.
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/add-device.jpg" alt="Add Device">
+            <p>
+                To add a new device the user can enter whether its name or location
+                with the id number and finally press sync to conclude the process.
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/new-device-created.jpg" alt="Empty device list">
+            <p>
+                When a new device is created no gestures are available, the user can generate them
+                by pressing the "+" button on the bottom right corner.
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/create-gesture.jpg" alt="Create gesture">
+            <p>
+                The user creates the gesture by introducing on the screen the pattern that he/she
+                wants to set to perform a specific action.
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/select-action.jpg" alt="Select action">
+            <p>
+                After the gesture is selected, the user can decide which action will be
+                performed after tapping the knocki device.
+            </p>
+        </div>
+        <div>
+            <img src="img/low-level-prototype/new-gesture-established.jpg" alt="One gesture added">
+            <p>
+                The new device is ready and the gesture stays registered, if the user needs to
+                add a new one ha can press the "+" button and repeat the process.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

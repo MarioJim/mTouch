@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Knocki, by mTouch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmarking</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136702959-1"></script>
+    <script src="js/pageAnalytics.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/benchmarking.css" rel="stylesheet">
+    <script>
+        const toggleNav = () => {
+            document.getElementById('sidebarButton').classList.toggle('active');
+            document.getElementById('side-menu').classList.toggle('active');
+        }
+        const checkNav = () => {
+            if (window.innerWidth > 980) {
+                document.getElementById('sidebarButton').classList.remove('active');
+                document.getElementById('side-menu').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+
+<body onresize="checkNav()">
+    <header>
+        <a href="./index.html">
+            <div id="logo">
+                <h1>mT</h1>
+                <img src="img/logoO.png" id="logoO" alt="O">
+                <h1>uch</h1>
+            </div>
+        </a>
+        <div id="menu">
+            <a href="./personas.html">Personas</a>
+            <a href="./benchmarking.html">Benchmarking</a>
+            <a href="./low_level_prototype.html">Low level prototype</a>
+            <a href="./think_aloud_tests.html">Think aloud tests</a>
+            <a href="./evaluation.html">Evaluation</a>
+            <a href="./high_level_prototype.html">High level protoype</a>
+        </div>
+        <div id="sidebarButton" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="side-menu">
+        <a href="./personas.html">Personas</a>
+        <a href="./benchmarking.html">Benchmarking</a>
+        <a href="./low_level_prototype.html">Low level prototype</a>
+        <a href="./think_aloud_tests.html">Think aloud tests</a>
+        <a href="./evaluation.html">Evaluation</a>
+        <a href="./high_level_prototype.html">High level protoype</a>
+    </nav>
+
+    <section id="why">
+        <h2>Why choose Knocki?</h2>
+        <p>
+            There is a wide variety of devices that are able to accomplish smart tasks at home, such as the Amazon
+            Alexa,
+            Samsung's SmartThings, Apple's HomePod, among others.
+            <br>
+            But, why should you choose Knocki? <b>Knocki is simple, yet powerful.</b>
+        </p>
+    </section>
+
+    <h2>Our competitors</h2>
+    <section id="competitors">
+        <div>
+            <img src="img/benchmarking/EchoDot.jpg" alt="Amazon EchoDot">
+            <div>
+                <h3>Amazon EchoDot</h3>
+                <p>
+                    Echo Dot is an intelligent, voice-controlled speaker.
+                    It connects via Wi-Fi to Alexa, a cloud-based voice service. Alexa can play music, answer questions,
+                    narrate news, check the weather forecast, set alarms, control compatible Smart House devices and
+                    much more.
+                    <br><br>
+                    <b>How is Knocki better?</b>
+                    <br>
+                    While Alexa may not hear you, Knocki is present in all of your surfaces. A simple gesture and the
+                    action you require is performed.
+                </p>
+            </div>
+        </div>
+        <div>
+            <img src="img/benchmarking/alexa-ss1.jpg" alt="Alexa screenshot 1">
+            <img src="img/benchmarking/alexa-ss2.jpg" alt="Alexa screenshot 2">
+            <img src="img/benchmarking/alexa-ss3.jpg" alt="Alexa screenshot 3">
+            <img src="img/benchmarking/alexa-ss4.jpg" alt="Alexa screenshot 4">
+
+        </div>
+        <div>
+            <img src="img/benchmarking/HomePod.jpg" alt="Apple HomePod">
+            <div>
+                <h3>Apple HomePod</h3>
+                <p>
+                    The HomePod is an intelligent loudspeaker that is a complement to Apple Music. It has excellent bass
+                    and consistent sound quality when playing different music genres. The speaker is extremely easy to
+                    install and Siri, its digital assistant, can hear you from the other corner of a room.
+                    <br><br>
+                    <b>How is Knocki better?</b>
+                    <br>
+                    The HomePod is only compatible with iOS devices. Siri and HomeKit lack the sophistication and
+                    compatibility of other devices, like Knocki.
+                </p>
+            </div>
+        </div>
+        <div>
+            <img src="img/benchmarking/homepod-ss1.jpg" alt="HomePod screenshot 1">
+            <img src="img/benchmarking/homepod-ss2.jpg" alt="HomePod screenshot 2">
+            <img src="img/benchmarking/homepod-ss3.jpg" alt="HomePod screenshot 3">
+            <img src="img/benchmarking/homepod-ss4.jpg" alt="HomePod screenshot 4">
+
+        </div>
+        <div>
+            <img src="img/benchmarking/SmartThings.png" alt="Samsung SmartThings">
+            <div>
+                <h3>Samsung SmartThings</h3>
+                <p>
+                    The main goal of SmartThings is to provide a new class of automation by connecting appliances to one
+                    another, to the Internet, and to homeowners.
+                    <br><br>
+                    <b>How is Knocki better?</b>
+                    <br>
+                    Knocki can control everything SmartThings can, and also has many other integrations, as Nest devices
+                    and technologies like IFTTT.
+                </p>
+            </div>
+        </div>
+        <div>
+            <img src="img/benchmarking/smartthings-ss1.jpg" alt="SmartThings screenshot 1">
+            <img src="img/benchmarking/smartthings-ss2.jpg" alt="SmartThings screenshot 2">
+            <img src="img/benchmarking/smartthings-ss3.jpg" alt="SmartThings screenshot 3">
+            <img src="img/benchmarking/smartthings-ss4.jpg" alt="SmartThings screenshot 4">
+        </div>
+        <br>
+        <br>
+    </section>
+</body>
+
+</html>

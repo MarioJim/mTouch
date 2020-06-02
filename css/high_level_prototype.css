@@ -1,0 +1,403 @@
+body { margin: 0;  overflow-x: hidden; }
+body.preload * { transition: none; }
+section:not(#login) { display: none; }
+
+/* Login */
+#login {
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    background: url("../img/high-level-prototype/bg_login.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login > img {
+    max-width: 340px;
+    width: 60vw;
+    margin: 12vh;
+    border-radius: 50%;
+    box-shadow: 0px 0px 64px 0px rgba(0,0,0,0.7);
+    transition: margin 400ms;   
+}
+
+#login > img.onLogin { margin: 8vh; }
+#logbtn, #regbtn {
+    width: 60vw;
+    margin: 3vh;
+    box-sizing: border-box;
+    padding: 4vw 0;
+    border-radius: 15px;
+}
+
+#login > div > p { color: white; font-size: 4vw; }
+#logbtn { background: #26a69a; }
+#regbtn { background: #00897b; }
+
+#logform > form,
+#regform > form {
+    margin: 0 auto;
+    width: 70vw;
+    display: none;
+}
+
+#logform input,
+#regform input {
+    width: 70vw;
+    box-sizing: border-box;
+    background-color: #FFFFFFB0;
+    border-radius: 15px;
+    font-size: 22px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+#logform input { border: 4px solid #26a69a; }
+#regform input { border: 4px solid #00897b; }
+#logform input::placeholder,
+#regform input::placeholder { color: #777; }
+
+/* Main */
+#main { background: #FFF; }
+header {
+    position: fixed;
+    border-bottom: 0;
+    background: #00bfa5;
+    width: 94vw;
+    height: 60px;
+    justify-content: start;
+    transition: box-shadow .2s linear,-webkit-box-shadow .2s linear;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+header > svg { margin: auto 10px; height: 32px; position: fixed; }
+header path { fill: white; }
+header > h4 {
+    margin: 0 auto;
+    font-size: 28px;
+    color: white; 
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+#sidebarButton { float: right; }
+#sidebarButton > span { background-color: whitesmoke; }
+#content { margin-top: 60px; }
+#content > div { padding: 20px 20px calc(100px + 6vh) 20px; }
+#content > div:not(#listGestures) { display: none; }
+
+/* List gestures */
+div.gesture {
+    border: 3px solid #888;
+    margin: 10px;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+div.gesture > h5 { margin: 0; font-size: 16px; }
+div.gesture > div { height: 10vw; margin-top: 2vw; }
+div.gesture > div > img { height: 10vw; }
+
+/* List devices */
+div.device {
+    border: 3px solid #888;
+    margin: 10px;
+    padding: 14px;
+    border-radius: 10px;
+    display: inline-grid;
+    grid-column-gap: 16px;
+    grid-template-columns: 20vw auto 14vw;
+}
+
+div.device > img { width: 20vw; max-width: 120px; transition: 200ms filter linear; }
+div.device > img.off { filter: brightness(40%); }
+div.device > div {
+    width: calc(100vw - 34vw - 130px);
+    padding: 10px 0;
+    margin: auto 0;
+}
+
+div.device > div > h5 { margin: 0; font-size: 16px; }
+div.device > div > span { font-size: 14px; }
+div.device > div > span.on { color: green; }
+div.device > div > span.off { color: red; }
+
+/* Slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 14vw;
+    height: 28px;
+    margin: auto 0;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #2196F3; }
+input:focus + .slider { box-shadow: 0 0 1px #2196F3; }
+input:checked + .slider::before { transform: translateX(calc(14vw - 30px)); }
+
+/* Add & Edit, Device & Gesture */
+#addDevice, #addGesture,
+#editDevice, #editGesture,
+#myAccount { 
+    padding-bottom: calc(180px + 6vh) !important;
+    min-height: calc(94vh - 260px); 
+}
+
+#addDevice > h3,
+#addGesture > h3,
+#editDevice > h3,
+#editGesture > h3  {
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+.iconAndText {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 20vw auto;
+    grid-column-gap: 10px;
+}
+
+div.iconDev {
+    margin: 3vw;
+    width: 14vw;
+    height: 14vw;
+    background: #008e76;
+    border-radius: 50%;
+}
+
+div.iconDev > img {
+    filter: invert(90);
+    margin: 20%;
+    width: 60%;
+    height: 60%;
+}
+
+div.inp > h4  { margin: 12px 0 6px 0; }
+
+div.inp > input {
+    border: 0;
+    border-bottom: 2px solid #888;
+    width: 94%;
+    height: 28px;
+    font-size: 16px;
+}
+
+.appImg {
+    margin: 3vw;
+    width: 14vw;
+    height: 14vw;
+    background: url('../img/high-level-prototype/app_icons/facebook.png') center;
+    background-size: contain;
+    border-radius: 6px;
+}
+
+.selectApp {
+    margin: auto 0;
+    height: 44px;
+    width: 90%;
+    background-color: white;
+    font-size: 20px;
+    border: 4px solid #00bfa5;
+    padding: 5px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.centeredText { text-align: center; }
+
+.enterPattern {
+    height: 9vw;
+    margin: 10px;
+    padding: 1vw;
+    border: 3px solid #888;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 10vw;
+}
+
+.pattern {
+    display: flex;
+    justify-content: center;
+}
+
+.enterPattern img { height: 9vw; }
+
+.tappingArea {
+    background: lightgray;
+    margin: 10px;
+    height: 20vh;
+    border: 3px solid grey;
+    border-radius: 10px;
+}
+
+.gestureToggles {
+    margin: 10px;
+    min-height: 20vh;
+    border: 3px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.gestureToggles > div {
+    display: grid;
+    grid-template-columns: auto 14vw;
+    padding: 10px;
+}
+
+.gestureToggles > div > h4 { margin: auto 0; }
+
+#doneAddDevice, #doneAddGesture,
+#cancelAddDevice, #cancelAddGesture,
+#doneEditDevice, #doneEditGesture,
+#deleteEditDevice, #deleteEditGesture {
+    margin: 0 12vw;
+    padding: 16px;
+    border-radius: 30px;
+    width: calc(76vw - 40px);
+    box-sizing: border-box;
+    position: absolute;
+}
+
+#doneAddDevice, #doneAddGesture,
+#doneEditDevice, #doneEditGesture {
+    background: teal;
+    bottom: calc(110px + 6vh);
+}
+
+#cancelAddDevice, #cancelAddGesture {
+    background-color: white;
+    bottom: calc(40px + 6vh);
+    border: 4px solid #ED5E68;
+}
+
+#deleteEditDevice, #deleteEditGesture {
+    background: #ED5E68;
+    bottom: calc(40px + 6vh);
+}
+
+#doneAddDevice > p, #doneAddGesture > p,
+#doneEditDevice > p, #doneEditGesture > p,
+#deleteEditDevice > p, #deleteEditGesture > p { color: white; }
+
+/* Add button */
+#addGestureBtn, 
+#addDeviceBtn {
+    position: fixed;
+    bottom: calc(40px + 6vh);
+    right: 20px;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    background: #FFF;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+#addGestureBtn > svg,
+#addDeviceBtn > svg {
+    fill: #008e76;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* My Account */
+#myAccount > img {
+    display: block;
+    margin: 0 auto;
+    width: 32vw;
+}
+
+#myAccount > h4 { margin: 20px 20px 10px 20px; }
+#myAccount > p { font-family: 'Montserrat'; }
+#deleteAccount {
+    margin: 0 12vw;
+    padding: 16px;
+    border-radius: 30px;
+    width: calc(76vw - 40px);
+    box-sizing: border-box;
+    position: absolute;
+    background: #ED5E68;
+    bottom: calc(6vh + 40px);
+}
+
+#logOut {
+    margin: 0 12vw;
+    padding: 16px;
+    border-radius: 30px;
+    width: calc(76vw - 40px);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: calc(6vh + 110px);
+    background-color: white;
+    border: 4px solid #ED5E68;
+}
+
+#deleteAccount > p { color: white; }
+
+/* Settings */
+#settings > div {
+    border-bottom: 1px solid #888;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: auto 14vw;
+    grid-column-gap: 20px;
+}
+
+#settings > div > p { text-align: left; }
+
+/* Nav */
+nav {
+    position: fixed;
+    height: 6vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid grey;
+}
+
+nav > svg { width: 5vh; }
+
+nav path { fill: #CCC; }
+
+nav > svg.active > path { fill: #00bfa5; }
+
+section {
+    border-bottom: 0;
+    width: 100vw;
+    position: relative;
+}

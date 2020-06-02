@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Knocki, by mTouch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think aloud tests</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136702959-1"></script>
+    <script src="js/pageAnalytics.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/think_aloud_tests.css" rel="stylesheet">
+    <script>
+        const toggleNav = () => {
+            document.getElementById('sidebarButton').classList.toggle('active');
+            document.getElementById('side-menu').classList.toggle('active');
+        }
+        const checkNav = () => {
+            if (window.innerWidth > 980) {
+                document.getElementById('sidebarButton').classList.remove('active');
+                document.getElementById('side-menu').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+
+<body onresize="checkNav()">
+    <header>
+        <a href="./index.html">
+            <div id="logo">
+                <h1>mT</h1>
+                <img src="img/logoO.png" id="logoO" alt="O">
+                <h1>uch</h1>
+            </div>
+        </a>
+        <div id="menu">
+            <a href="./personas.html">Personas</a>
+            <a href="./benchmarking.html">Benchmarking</a>
+            <a href="./low_level_prototype.html">Low level prototype</a>
+            <a href="./think_aloud_tests.html">Think aloud tests</a>
+            <a href="./evaluation.html">Evaluation</a>
+            <a href="./high_level_prototype.html">High level protoype</a>
+        </div>
+        <div id="sidebarButton" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="side-menu">
+        <a href="./personas.html">Personas</a>
+        <a href="./benchmarking.html">Benchmarking</a>
+        <a href="./low_level_prototype.html">Low level prototype</a>
+        <a href="./think_aloud_tests.html">Think aloud tests</a>
+        <a href="./evaluation.html">Evaluation</a>
+        <a href="./high_level_prototype.html">High level protoype</a>
+    </nav>
+
+    <h2>Think aloud tests</h2>
+    <section id="videos">
+        <iframe src="https://www.youtube.com/embed/c-fBEofXnYA" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Wq4uHQNMuLs" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/950i5K_pulg" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <h2>Findings</h2>
+    <section id="findings">
+        <ul>
+            <li>Users usually get stuck in the main screen since it seems a loop and there is no screen indicator.</li>
+            <li>The last option that they interact with is the add device option</li>
+            <li>There is no way to edit or delete already stablished gestures</li>
+            <li>When creating a new gesture there is no option to correct it in case of wrong input, a button to accept
+                the gesture is also missing</li>
+            <li>There is no status indication when the users create a new device, so they don't notice it</li>
+            <li>Some tasks aren't obvious to use or find</li>
+        </ul>
+    </section>
+</body>
+
+</html>

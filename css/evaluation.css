@@ -1,0 +1,32 @@
+h3 {
+    text-align: center;
+    font-size: 26px;
+}
+
+#heuristic > div {
+    margin: 20px auto;
+    padding: 0 8vw;
+    max-width: 900px;
+}
+
+@media (max-width: 670px) {
+    .images > img:nth-child(2) { display: none; }
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.images > img {
+    margin: 6px;
+    height: 50vh;
+}
+
+#model > iframe {
+    display: block;
+    margin: 20px auto;
+    width: 90vw;
+    max-width: 560px;
+}

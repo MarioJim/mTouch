@@ -1,0 +1,64 @@
+#why {
+    padding: 0 5% 10px 5%;
+}
+
+#why > p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    line-height: 160%;
+    margin: 10px auto;
+    max-width: 1000px;
+}
+
+#competitors {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 1600px;
+}
+
+#competitors > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#competitors > div:nth-child(even) {
+    margin-bottom: 24px;
+}
+
+#competitors > div:nth-child(even) > img {
+    width: 220px;
+}
+
+#competitors > div:nth-child(odd) > img {
+    margin: 0 30px;
+    width: 22%;
+}
+
+#competitors > div > div {
+    margin-bottom: 15px;
+    width: 60%;
+}
+
+#competitors h3 {
+    font-size: 20px;
+}
+
+#competitors p {
+    text-align: justify;
+}
+
+@media (max-width: 750px) {
+    #competitors > div:nth-child(even) > img { width: 45%; max-width: 220px; }
+    #competitors > div:nth-child(even) > img:nth-child(3) { display: none; }
+}
+
+@media (max-width: 1000px) {
+    #competitors > div:nth-child(odd) > img:first-of-type { width: 60%; }
+    #competitors > div:nth-child(odd) > div { width: auto; }
+    #competitors > div:nth-child(even) {  margin-bottom: 50px; }
+    #competitors > div:nth-child(even) > img:nth-child(4) { display: none; }
+}

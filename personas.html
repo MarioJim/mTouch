@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Knocki, by mTouch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136702959-1"></script>
+    <script src="js/pageAnalytics.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto:300,400" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/personas.css" rel="stylesheet">
+    <script>
+        const toggleNav = () => {
+            document.getElementById('sidebarButton').classList.toggle('active');
+            document.getElementById('side-menu').classList.toggle('active');
+        }
+        const checkNav = () => {
+            if (window.innerWidth > 980) {
+                document.getElementById('sidebarButton').classList.remove('active');
+                document.getElementById('side-menu').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+
+<body onresize="checkNav()">
+    <header>
+        <a href="./index.html">
+            <div id="logo">
+                <h1>mT</h1>
+                <img src="img/logoO.png" id="logoO" alt="O">
+                <h1>uch</h1>
+            </div>
+        </a>
+        <div id="menu">
+            <a href="./personas.html">Personas</a>
+            <a href="./benchmarking.html">Benchmarking</a>
+            <a href="./low_level_prototype.html">Low level prototype</a>
+            <a href="./think_aloud_tests.html">Think aloud tests</a>
+            <a href="./evaluation.html">Evaluation</a>
+            <a href="./high_level_prototype.html">High level protoype</a>
+        </div>
+        <div id="sidebarButton" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="side-menu">
+        <a href="./personas.html">Personas</a>
+        <a href="./benchmarking.html">Benchmarking</a>
+        <a href="./low_level_prototype.html">Low level prototype</a>
+        <a href="./think_aloud_tests.html">Think aloud tests</a>
+        <a href="./evaluation.html">Evaluation</a>
+        <a href="./high_level_prototype.html">High level protoype</a>
+    </nav>
+
+    <h2>Personas</h2>
+    <section id="personas">
+        <div>
+            <h3>Stacey</h3>
+            <p>
+                Single mother, 36 years old
+                <br>
+                Ocuppation: Accountant
+                <br>
+                "If I'm not working, I'm probably taking care of my kids"
+            </p>
+            <img src="img/personas/stacey.jpg" alt="A middle age woman working">
+            <p>
+                Stacey spends spends most of her time at the office where she works.
+                When she arrives home she is tired and often can't spend much time with
+                her two children, however, she tries to be responsible and give
+                the best of herself even if she can't always be there.
+                <br><br>
+                <b>Skills:</b> Creative, focused, open minded, likes to solve problems.
+                <br><br>
+                <b>Frustrations:</b> Has to deal with many things at once, she has no time for herself.
+        </div>
+        <div>
+            <h3>Jimmy</h3>
+            <p>
+                16 years old
+                <br>
+                Occupation: Student
+                <br>
+                "I'm a simple guy, life should not be complicated"
+            </p>
+            <img src="img/personas/jimmy.jpg" alt="A young boy">
+            <p>
+                Jimmy believes that simple tasks at home can be made even simpler. He is
+                always trying to make his life more comfortable and save time that he can
+                invest doing other things. If there is a shortcut to something, Jimmy will
+                find it, even if the task is already simple.
+                <br><br>
+                <b>Skills:</b> Creative, interested in technology.
+                <br><br>
+                <b>Frustrations:</b> Simple tasks take too much time, he does not like to over-strive.
+            </p>
+        </div>
+        <div>
+            <h3>Shana</h3>
+            <p>
+                20 years old
+                <br>
+                Occupation: Student
+                <br>
+                "My priority is making the most out of my time"
+            </p>
+            <img src="img/personas/shana.jpg" alt="A girl holding a book">
+            <p>
+                Since Shana lives alone, she needs to be efficient at all times. When school
+                is over she goes home as soon as possible so that she is able to finish her
+                tasks and study over the evening. She likes to be concentrated and often wishes
+                not to have to get up from her desk to do other things.
+                <br><br>
+                <b>Skills:</b> Organized, responsible, likes to keep her workspace clean.
+                <br><br>
+                <b>Frustrations:</b> Her life goes at a fast pace.
+            </p>
+        </div>
+        <div>
+            <h3>Christian</h3>
+            <p>
+                24 years old
+                <br>
+                Occupation: Engineer
+                <br>
+                "I love tech and the way it can make our lives easier"
+            </p>
+            <img src="img/personas/christian.jpg" alt="A young man holding a computer">
+            <p>
+                Christian enjoys testing new technological devices that get
+                released from time to time and tries searching the ones that
+                can improve his daily life. Even though he knows a lot about
+                tech, he believes that most devices are too complex and slow
+                for him to implement them on his routine.
+                <br><br>
+                <b>Skills:</b> Likes experiencing new technologies, adaptable,
+                learns quick.
+                <br><br>
+                <b>Frustrations:</b> Can't find efficient devices.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

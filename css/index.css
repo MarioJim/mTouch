@@ -1,0 +1,147 @@
+#knocki {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px 20px 30px;
+}
+
+#knocki > img {
+    height: 400px;
+    animation: rise 2s ease forwards;
+}
+
+#knocki > div {
+    width: 40%;
+    padding: 0 0 60px 60px;
+    animation: rise 2s ease forwards;
+}
+
+@keyframes rise {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { transform: translateY(0px); }
+}
+
+#knocki > div > h2 {
+    text-align: left;
+    width: 100%;
+}
+
+#knocki > div > p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 160%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+@media (max-width: 800px) {
+    #knocki { flex-wrap: wrap; }
+
+    #knocki > img {
+        max-width: 400px;
+        width: 80%;
+        height: auto;
+    }
+
+    #knocki > div {
+        min-width: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+#ad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+@media (max-width: 800px) {
+    #ad { flex-wrap: wrap; }
+}
+
+#ad > h2 { margin: 20px 60px; }
+
+#uses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#uses > div {
+    background-color: #e7f2fd;
+    width: 130px;
+    height: 110px;
+    color: #303030;
+    border-radius: 100px 200px 200px 360px;
+    margin: 0 30px 80px 30px;
+    transition-duration: 500ms;
+}
+
+#uses > div:hover {
+    background-color: #1583e9;
+    box-shadow: 0 6px 50px 8px #1583E930;
+}
+
+#uses > div > img {
+    height: 100%;
+    margin-left: 14%;
+    margin-bottom: 5px;
+    filter: invert(75%);
+    transition-duration: 500ms;
+}
+
+#uses > div:hover > img {
+    filter: invert(0%);
+}
+
+#uses > div > p {
+    margin: 0;
+}
+
+#members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#members > div {
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#members > div > * {
+    margin: 5px 0;
+    text-align: center;
+}
+
+#members > div > img {
+    margin-bottom: 10px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+#analytics > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+#analytics > div {
+    display: flex;
+    justify-content: center;
+}
+
+#analytics > div > img {
+    margin: 6px;
+    max-height: 38vw;
+    height: 40vh;
+}
